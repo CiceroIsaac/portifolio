@@ -60,6 +60,9 @@ export function Contact() {
             <a href="https://www.linkedin.com/in/isaac-sousa-a57b7a259/" target="_blank" rel="noopener noreferrer">
               LinkedIn ↗
             </a>
+            <a href="https://www.instagram.com/isaacsz_7/" target="_blank" rel="noopener noreferrer">
+              Instagram ↗
+            </a>
           </div>
         </div>
       </div>
