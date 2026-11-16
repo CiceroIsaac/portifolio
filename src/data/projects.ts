@@ -134,7 +134,15 @@ export const projects: Project[] = [
       "Nenhum preço, peso ou dado nutricional inventado; \"Ver ideia\" explica o estudo sem link vazio.",
     ],
   }),
-  landingPlaceholder("dona-benta", "Farinha Dona Benta", "03"),
+  landingStudy("dona-benta", "Farinha Dona Benta", "03", {
+    summary:
+      "Landing page conceitual inspirada na Farinha Dona Benta: creme, azul e terracota, serifa Bookman e fotografia de receitas em um clima acolhedor e editorial.",
+    points: [
+      "Hero com arco, foto circular e card do produto, reorganizada no mobile.",
+      "Caderno de receitas com cards responsivos e <details> no lugar de links sem destino.",
+      "Fontes locais (URW Bookman e Manrope) carregadas com next/font.",
+    ],
+  }),
   landingPlaceholder("burger-king", "Burger King", "04"),
   landingPlaceholder("doritos", "Doritos", "05"),
   {
