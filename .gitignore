@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+
+# Build do Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Ambiente e logs
+.env*
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Arquivos de editor
+*.code-workspace

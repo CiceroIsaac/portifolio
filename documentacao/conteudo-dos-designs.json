@@ -1,0 +1,1692 @@
+{
+  "itau": [
+    {
+      "text": "Para você",
+      "x": "490",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Soluções",
+      "x": "643",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "No seu ritmo",
+      "x": "796",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conhecer o Itaú",
+      "x": "1173",
+      "y": "62.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "MAIS POSSIBILIDADES PARA A SUA VIDA",
+      "x": "80",
+      "y": "180",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seu próximo",
+      "x": "80",
+      "y": "280",
+      "fontSize": "82",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "passo começa",
+      "x": "80",
+      "y": "371",
+      "fontSize": "82",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "aqui.",
+      "x": "80",
+      "y": "462",
+      "fontSize": "82",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Um banco que acompanha seus planos. Do primeiro",
+      "x": "80",
+      "y": "595",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "movimento às grandes conquistas.",
+      "x": "80",
+      "y": "627",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Descubra possibilidades",
+      "x": "103",
+      "y": "732.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tudo no seu tempo. Tudo no seu app.",
+      "x": "80",
+      "y": "791",
+      "fontSize": "13",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Olá, seu próximo passo.",
+      "x": "27",
+      "y": "92",
+      "fontSize": "13",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Meu dia a dia",
+      "x": "27",
+      "y": "134",
+      "fontSize": "25",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tudo em um só lugar",
+      "x": "27",
+      "y": "165",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Cartões",
+      "x": "55",
+      "y": "294",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Pix",
+      "x": "135",
+      "y": "294",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Pagar",
+      "x": "215",
+      "y": "294",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seus planos, mais perto",
+      "x": "26",
+      "y": "339",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Um novo começo",
+      "x": "79",
+      "y": "390",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explore possibilidades",
+      "x": "79",
+      "y": "414",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seu mundo",
+      "x": "22",
+      "y": "116",
+      "fontSize": "20",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "CARTÃO ILUSTRATIVO",
+      "x": "22",
+      "y": "145",
+      "fontSize": "9",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "INTERFACE CONCEITUAL",
+      "x": "1082.5",
+      "y": "848",
+      "fontSize": "11",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conta e cartões",
+      "x": "155",
+      "y": "947",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Para seus próximos passos",
+      "x": "155",
+      "y": "975",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tudo pelo app",
+      "x": "474",
+      "y": "947",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Na palma da sua mão",
+      "x": "474",
+      "y": "975",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seu dia a dia",
+      "x": "793",
+      "y": "947",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Mais simples de organizar",
+      "x": "793",
+      "y": "975",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Perto de você",
+      "x": "1112",
+      "y": "947",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Quando precisar",
+      "x": "1112",
+      "y": "975",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "POSSIBILIDADES",
+      "x": "80",
+      "y": "1140",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Para cada plano,",
+      "x": "80",
+      "y": "1204",
+      "fontSize": "48",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "um novo caminho.",
+      "x": "80",
+      "y": "1262",
+      "fontSize": "48",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Escolha o que faz sentido para o seu",
+      "x": "900",
+      "y": "1211",
+      "fontSize": "20",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "momento.",
+      "x": "900",
+      "y": "1242",
+      "fontSize": "20",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Sua conta, seu ritmo",
+      "x": "110",
+      "y": "1445",
+      "fontSize": "24",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Organize os movimentos do dia e encontre",
+      "x": "110",
+      "y": "1490",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "espaço para o que vem depois.",
+      "x": "110",
+      "y": "1517",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar",
+      "x": "110",
+      "y": "1610",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Um cartão que acompanha",
+      "x": "543",
+      "y": "1445",
+      "fontSize": "24",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Descubra possibilidades para suas",
+      "x": "543",
+      "y": "1490",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "compras e seus próximos destinos.",
+      "x": "543",
+      "y": "1517",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar",
+      "x": "543",
+      "y": "1610",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Planos que saem do papel",
+      "x": "976",
+      "y": "1445",
+      "fontSize": "24",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Comece a organizar seus objetivos com",
+      "x": "976",
+      "y": "1490",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "mais clareza, um passo de cada vez.",
+      "x": "976",
+      "y": "1517",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar",
+      "x": "976",
+      "y": "1610",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "A VIDA ACONTECE AGORA",
+      "x": "760",
+      "y": "1840",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Menos complicação.",
+      "x": "760",
+      "y": "1912",
+      "fontSize": "47",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Mais vida",
+      "x": "760",
+      "y": "1970",
+      "fontSize": "47",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "acontecendo.",
+      "x": "760",
+      "y": "2028",
+      "fontSize": "47",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O café no caminho, aquela viagem, um projeto novo.",
+      "x": "760",
+      "y": "2118",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Suas escolhas merecem espaço no dia a dia.",
+      "x": "760",
+      "y": "2148",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conheça as soluções",
+      "x": "783",
+      "y": "2257.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "UM APP. MUITAS POSSIBILIDADES.",
+      "x": "80",
+      "y": "2502",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seu banco cabe",
+      "x": "80",
+      "y": "2585",
+      "fontSize": "58",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "nos seus planos.",
+      "x": "80",
+      "y": "2653",
+      "fontSize": "58",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Resolva o essencial em poucos toques.",
+      "x": "123",
+      "y": "2753",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Encontre suas soluções em um só lugar.",
+      "x": "123",
+      "y": "2808",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Leve o Itaú com você.",
+      "x": "123",
+      "y": "2863",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ILUSTRAÇÃO DE EXPERIÊNCIA",
+      "x": "1089.5",
+      "y": "2920",
+      "fontSize": "11",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Vamos dar o próximo passo?",
+      "x": "80",
+      "y": "3103",
+      "fontSize": "42",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conhecer o Itaú",
+      "x": "1110",
+      "y": "3092.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "itaú",
+      "x": "80",
+      "y": "3284",
+      "fontSize": "30",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conceito por Cícero Isaac",
+      "x": "1360",
+      "y": "3274",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ESTUDO DE PORTFÓLIO · NÃO OFICIAL",
+      "x": "1360",
+      "y": "3302",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    }
+  ],
+  "nescau": [
+    {
+      "text": "Produtos",
+      "x": "590",
+      "y": "63",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Receitas",
+      "x": "747",
+      "y": "63",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Seu momento",
+      "x": "904",
+      "y": "63",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar sabores",
+      "x": "1173",
+      "y": "62.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "BORA COLOCAR O DIA EM MOVIMENTO?",
+      "x": "80",
+      "y": "178",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "DÁ UM PLAY",
+      "x": "72",
+      "y": "305",
+      "fontSize": "102",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NO SEU DIA.",
+      "x": "72",
+      "y": "421",
+      "fontSize": "102",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Tem sabor de chocolate. Tem seu jeito. Tem Nescau",
+      "x": "80",
+      "y": "531",
+      "fontSize": "22",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "nos momentos que você faz acontecer.",
+      "x": "80",
+      "y": "564",
+      "fontSize": "22",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Encontre seu Nescau",
+      "x": "103",
+      "y": "699.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SABOR QUE ACOMPANHA O SEU RITMO",
+      "x": "80",
+      "y": "816",
+      "fontSize": "13",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SEU DIA. SEU RITMO. SEU NESCAU.",
+      "x": "720",
+      "y": "937",
+      "fontSize": "36",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "ENCONTRE O SEU",
+      "x": "80",
+      "y": "1070",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "UM SABOR. VÁRIOS MOMENTOS.",
+      "x": "80",
+      "y": "1148",
+      "fontSize": "49",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NESCAU EM PÓ",
+      "x": "107",
+      "y": "1563",
+      "fontSize": "22",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "O clássico da sua rotina",
+      "x": "107",
+      "y": "1599",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NESCAU REFIL",
+      "x": "542",
+      "y": "1563",
+      "fontSize": "22",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Seu sabor, em outro formato",
+      "x": "542",
+      "y": "1599",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SEU MOMENTO NESCAU",
+      "x": "977",
+      "y": "1563",
+      "fontSize": "22",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "A dupla que combina com você",
+      "x": "977",
+      "y": "1599",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "COZINHA EM MODO PLAY",
+      "x": "760",
+      "y": "1843",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "UMA RECEITA.",
+      "x": "756",
+      "y": "1946",
+      "fontSize": "60",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "MIL JEITOS",
+      "x": "756",
+      "y": "2018",
+      "fontSize": "60",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "DE CURTIR.",
+      "x": "756",
+      "y": "2090",
+      "fontSize": "60",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Da pausa da tarde ao encontro com a galera: transforme o",
+      "x": "760",
+      "y": "2196",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "sabor de sempre em novas ideias.",
+      "x": "760",
+      "y": "2227",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Descobrir receitas",
+      "x": "783",
+      "y": "2324.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "IDEIAS PARA TIRAR DO PAPEL",
+      "x": "80",
+      "y": "2480",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "QUAL VAI SER A DE HOJE?",
+      "x": "80",
+      "y": "2547",
+      "fontSize": "49",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NA COZINHA",
+      "x": "400",
+      "y": "2660",
+      "fontSize": "11",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "PANQUECAS DE CHOCOLATE",
+      "x": "400",
+      "y": "2710",
+      "fontSize": "19.44",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Uma pausa que merece capricho.",
+      "x": "400",
+      "y": "2812",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Ver ideia",
+      "x": "400",
+      "y": "2895",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NA COZINHA",
+      "x": "1060",
+      "y": "2660",
+      "fontSize": "11",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "UM CAFÉ DA MANHÃ",
+      "x": "1060",
+      "y": "2710",
+      "fontSize": "22",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "DO SEU JEITO",
+      "x": "1060",
+      "y": "2740",
+      "fontSize": "22",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Combinações para começar",
+      "x": "1060",
+      "y": "2812",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "diferente.",
+      "x": "1060",
+      "y": "2837",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Ver ideia",
+      "x": "1060",
+      "y": "2895",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O PRÓXIMO MOMENTO É SEU.",
+      "x": "80",
+      "y": "3101",
+      "fontSize": "43",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Escolha seu sabor",
+      "x": "1115",
+      "y": "3089.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NESCAU",
+      "x": "80",
+      "y": "3219",
+      "fontSize": "30",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Conceito por Cícero Isaac",
+      "x": "1360",
+      "y": "3209",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ESTUDO DE PORTFÓLIO · NÃO OFICIAL",
+      "x": "1360",
+      "y": "3237",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    }
+  ],
+  "dona-benta": [
+    {
+      "text": "Receitas",
+      "x": "483",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Nossos produtos",
+      "x": "668",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Cozinha com afeto",
+      "x": "853",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Encontre uma receita",
+      "x": "1125",
+      "y": "63.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O MELHOR INGREDIENTE É ESTAR JUNTO.",
+      "x": "80",
+      "y": "190",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tem carinho",
+      "x": "76",
+      "y": "297",
+      "fontSize": "77",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "nessa receita.",
+      "x": "76",
+      "y": "388",
+      "fontSize": "77",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Da primeira colher de farinha ao último pedaço:",
+      "x": "80",
+      "y": "495",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "histórias boas começam na cozinha.",
+      "x": "80",
+      "y": "528",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Vamos cozinhar?",
+      "x": "103",
+      "y": "650.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Um clássico",
+      "x": "880",
+      "y": "689",
+      "fontSize": "17",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "da sua cozinha.",
+      "x": "880",
+      "y": "714",
+      "fontSize": "14",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "A MESA FICA MELHOR COM HISTÓRIAS.",
+      "x": "80",
+      "y": "813",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "CADERNO DE RECEITAS",
+      "x": "80",
+      "y": "984",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Hoje tem gostinho de quê?",
+      "x": "80",
+      "y": "1053",
+      "fontSize": "49",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Escolha uma ideia e coloque a mão na massa.",
+      "x": "80",
+      "y": "1102",
+      "fontSize": "18",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "DOCE · BOLO",
+      "x": "80",
+      "y": "1531",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Bolo para compartilhar",
+      "x": "80",
+      "y": "1573",
+      "fontSize": "25",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Abrir o caderno",
+      "x": "80",
+      "y": "1616",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "DOCE · BROWNIE",
+      "x": "515",
+      "y": "1531",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Um carinho de chocolate",
+      "x": "515",
+      "y": "1573",
+      "fontSize": "25",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Abrir o caderno",
+      "x": "515",
+      "y": "1616",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SALGADO · MASSAS",
+      "x": "950",
+      "y": "1531",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Almoço que reúne",
+      "x": "950",
+      "y": "1573",
+      "fontSize": "25",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Abrir o caderno",
+      "x": "950",
+      "y": "1616",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "PARA CRIAR NOVAS MEMÓRIAS",
+      "x": "700",
+      "y": "1813",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Todo começo pede",
+      "x": "700",
+      "y": "1896",
+      "fontSize": "47",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "um pouco de farinha.",
+      "x": "700",
+      "y": "1958",
+      "fontSize": "47",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Tem receita que passa de mão em mão. E tem aquela que você",
+      "x": "700",
+      "y": "2077",
+      "fontSize": "20",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "inventa hoje. O importante é o que acontece ao redor da mesa.",
+      "x": "700",
+      "y": "2110",
+      "fontSize": "20",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conheça nossos produtos",
+      "x": "723",
+      "y": "2254.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "FARINHA DE TRIGO TRADICIONAL",
+      "x": "80",
+      "y": "2433",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O começo de",
+      "x": "80",
+      "y": "2513",
+      "fontSize": "54",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "tantas coisas boas.",
+      "x": "80",
+      "y": "2579",
+      "fontSize": "54",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Pães, bolos, massas e ideias que ainda vão surgir. Um",
+      "x": "80",
+      "y": "2698",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ingrediente do dia a dia, muitas possibilidades na sua cozinha.",
+      "x": "80",
+      "y": "2729",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Para o bolo do fim de tarde",
+      "x": "123",
+      "y": "2840",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Para uma massa feita em casa",
+      "x": "123",
+      "y": "2889",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Para descobrir sua próxima receita",
+      "x": "123",
+      "y": "2938",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O que vamos preparar juntos?",
+      "x": "124",
+      "y": "3141",
+      "fontSize": "39",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Abra o caderno. Escolha uma receita. Crie uma lembrança.",
+      "x": "124",
+      "y": "3193",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Ver receitas",
+      "x": "1104",
+      "y": "3176.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Dona Benta",
+      "x": "80",
+      "y": "3414",
+      "fontSize": "30",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Conceito por Cícero Isaac",
+      "x": "1360",
+      "y": "3404",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ESTUDO DE PORTFÓLIO · NÃO OFICIAL",
+      "x": "1360",
+      "y": "3432",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    }
+  ],
+  "burger-king": [
+    {
+      "text": "Cardápio",
+      "x": "495",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Do seu jeito",
+      "x": "660",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Restaurantes",
+      "x": "825",
+      "y": "65",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar o cardápio",
+      "x": "1133",
+      "y": "62.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "QUANDO A VONTADE CHAMA...",
+      "x": "720",
+      "y": "172",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Bateu a fome?",
+      "x": "720",
+      "y": "267",
+      "fontSize": "88",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Vai de Whopper.",
+      "x": "720",
+      "y": "362",
+      "fontSize": "88",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "WHOPPER",
+      "x": "720",
+      "y": "661",
+      "fontSize": "195",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "GRELHADO",
+      "x": "1148",
+      "y": "532",
+      "fontSize": "18",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "NO FOGO",
+      "x": "1148",
+      "y": "560",
+      "fontSize": "18",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "O clássico que chega chegando.",
+      "x": "720",
+      "y": "935",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Conheça o Whopper",
+      "x": "588",
+      "y": "1009.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SABOR GRANDE. VONTADE MAIOR AINDA.",
+      "x": "720",
+      "y": "1143",
+      "fontSize": "33",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "QUAL É O SEU FAVORITO?",
+      "x": "80",
+      "y": "1283",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Escolha sua próxima mordida.",
+      "x": "80",
+      "y": "1356",
+      "fontSize": "46",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Whopper",
+      "x": "107",
+      "y": "1730",
+      "fontSize": "28",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "O clássico do seu jeito.",
+      "x": "107",
+      "y": "1767",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Whopper Duplo",
+      "x": "542",
+      "y": "1730",
+      "fontSize": "28",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Para uma vontade em dobro.",
+      "x": "542",
+      "y": "1767",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "BK Chicken",
+      "x": "977",
+      "y": "1730",
+      "fontSize": "28",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Outra forma de matar a fome.",
+      "x": "977",
+      "y": "1767",
+      "fontSize": "15",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "A COMBINAÇÃO É SUA.",
+      "x": "80",
+      "y": "2007",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Do seu jeito.",
+      "x": "76",
+      "y": "2090",
+      "fontSize": "63",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Até a última",
+      "x": "76",
+      "y": "2166",
+      "fontSize": "63",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "mordida.",
+      "x": "76",
+      "y": "2242",
+      "fontSize": "63",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Pão com gergelim",
+      "x": "938",
+      "y": "2159",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Carne grelhada",
+      "x": "1186",
+      "y": "2159",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Alface",
+      "x": "938",
+      "y": "2364",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tomate",
+      "x": "1186",
+      "y": "2364",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "MELHOR AINDA JUNTO",
+      "x": "80",
+      "y": "2573",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Tem companhia",
+      "x": "80",
+      "y": "2655",
+      "fontSize": "52",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "pra esse sabor.",
+      "x": "80",
+      "y": "2721",
+      "fontSize": "52",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Batata quentinha, sua bebida favorita e uma pausa",
+      "x": "80",
+      "y": "2830",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "merecida. Agora é só aproveitar.",
+      "x": "80",
+      "y": "2861",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Explorar combinações",
+      "x": "103",
+      "y": "2984.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Sua próxima parada tem sabor.",
+      "x": "120",
+      "y": "3170",
+      "fontSize": "35",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Encontre um BK e venha do seu jeito.",
+      "x": "120",
+      "y": "3215",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Encontrar um BK",
+      "x": "1111",
+      "y": "3181.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "BURGER KING",
+      "x": "80",
+      "y": "3344",
+      "fontSize": "30",
+      "fontFamily": "URW Bookman"
+    },
+    {
+      "text": "Conceito por Cícero Isaac",
+      "x": "1360",
+      "y": "3334",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ESTUDO DE PORTFÓLIO · NÃO OFICIAL",
+      "x": "1360",
+      "y": "3362",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    }
+  ],
+  "doritos": [
+    {
+      "text": "Doritos",
+      "x": "0",
+      "y": "49",
+      "fontSize": "33",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Sabores",
+      "x": "566",
+      "y": "64",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "No seu momento",
+      "x": "742",
+      "y": "64",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "A marca",
+      "x": "918",
+      "y": "64",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Escolha seu sabor",
+      "x": "1138",
+      "y": "62.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "INTENSIDADE NÃO SEGUE ROTEIRO.",
+      "x": "80",
+      "y": "186",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "O ÓBVIO",
+      "x": "72",
+      "y": "299",
+      "fontSize": "108",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NÃO TEM",
+      "x": "72",
+      "y": "422",
+      "fontSize": "108",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "VEZ.",
+      "x": "72",
+      "y": "545",
+      "fontSize": "108",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Quebre a rotina. Aumente o sabor. Transforme qualquer",
+      "x": "80",
+      "y": "647",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "momento no seu próximo rolê.",
+      "x": "80",
+      "y": "680",
+      "fontSize": "21",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Descubra os sabores",
+      "x": "103",
+      "y": "799.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SABOR NO MÁXIMO",
+      "x": "1029.0",
+      "y": "828",
+      "fontSize": "11",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "AUMENTE O SABOR  /  QUEBRE A ROTINA  /  VAI DE DORITOS",
+      "x": "720",
+      "y": "995",
+      "fontSize": "31",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "ESCOLHA SEU LADO INTENSO",
+      "x": "80",
+      "y": "1150",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "QUAL É A SUA VIBE?",
+      "x": "80",
+      "y": "1237",
+      "fontSize": "62",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "01",
+      "x": "110",
+      "y": "1375",
+      "fontSize": "20",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "QUEIJO",
+      "x": "372",
+      "y": "1545",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NACHO",
+      "x": "372",
+      "y": "1594",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "O clássico que rouba a cena.",
+      "x": "372",
+      "y": "1685",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "02",
+      "x": "770",
+      "y": "1375",
+      "fontSize": "20",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "SWEET",
+      "x": "1032",
+      "y": "1545",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "CHILI",
+      "x": "1032",
+      "y": "1594",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Um encontro de sabores intensos.",
+      "x": "1032",
+      "y": "1685",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SEU MOMENTO PEDE MAIS",
+      "x": "80",
+      "y": "1950",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NÃO É SÓ UMA PAUSA.",
+      "x": "80",
+      "y": "2040",
+      "fontSize": "57",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "É A SUA PAUSA.",
+      "x": "80",
+      "y": "2110",
+      "fontSize": "57",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NO PLAY",
+      "x": "108",
+      "y": "2414",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Próxima fase: sabor.",
+      "x": "108",
+      "y": "2461",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NO ROLÊ",
+      "x": "543",
+      "y": "2414",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "O encontro começa aqui.",
+      "x": "543",
+      "y": "2461",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "NO SOFÁ",
+      "x": "978",
+      "y": "2414",
+      "fontSize": "38",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Sua série tem companhia.",
+      "x": "978",
+      "y": "2461",
+      "fontSize": "17",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "SEM ESPAÇO PARA O TANTO FAZ.",
+      "x": "675",
+      "y": "2746",
+      "fontSize": "12",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "APERTE O PLAY",
+      "x": "675",
+      "y": "2843",
+      "fontSize": "53",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "NO INESPERADO.",
+      "x": "675",
+      "y": "2912",
+      "fontSize": "53",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "O próximo momento pode começar com um convite, uma ideia ou um",
+      "x": "675",
+      "y": "3025",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "pacote aberto.",
+      "x": "675",
+      "y": "3056",
+      "fontSize": "19",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "Encontre seu Doritos",
+      "x": "698",
+      "y": "3147.0",
+      "fontSize": "16",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "DORITOS",
+      "x": "80",
+      "y": "3269",
+      "fontSize": "30",
+      "fontFamily": "DejaVu Sans Condensed"
+    },
+    {
+      "text": "Conceito por Cícero Isaac",
+      "x": "1360",
+      "y": "3259",
+      "fontSize": "14",
+      "fontFamily": "Manrope"
+    },
+    {
+      "text": "ESTUDO DE PORTFÓLIO · NÃO OFICIAL",
+      "x": "1360",
+      "y": "3287",
+      "fontSize": "10",
+      "fontFamily": "Manrope"
+    }
+  ]
+}

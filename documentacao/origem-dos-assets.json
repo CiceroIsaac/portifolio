@@ -1,0 +1,135 @@
+{
+  "notice": "Imagens e marcas pertencem aos respectivos titulares. Fontes públicas consultadas para estudos independentes, sem vínculo comercial. Não são fotos de autoria de Isaac.",
+  "assets": [
+    {
+      "path": "assets-landing-pages/itau/itau-hands.png",
+      "source": "https://www.itau.com.br/media/dam/m/540176ecd4a04ba4/original/imagem_maos_sem_fundo.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/itau/itau-logo.png",
+      "source": "https://www.itau.com.br/media/dam/m/617c0fa5f48ce445/original/ITAU_LOGO_LARANJA_114X114.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/itau/itau-person.png",
+      "source": "https://www.itau.com.br/media/dam/m/bb0c20282881231/original/home-3-397x474.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-bag.png",
+      "source": "https://www.nescau.com.br/sites/default/files/2025-08/nescau-achocolatado-550g.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-breakfast.png",
+      "source": "https://www.nescau.com.br/sites/default/files/2023-01/breakfast_0.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-can.png",
+      "source": "https://www.nescau.com.br/sites/default/files/2025-08/nescau-achocolatado-350g.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-drink.png",
+      "source": "https://www.nescau.com.br/sites/default/files/2023-08/achocolatado-po-pronto-para-beber.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-logo.svg",
+      "source": "https://www.nescau.com.br/themes/custom/hubnescau/public/images/logo-nescau-vertical.svg?v=2024",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/nescau/nescau-pancakes.jpg",
+      "source": "https://www.nescau.com.br/sites/default/files/2023-01/nescau-panqueca-americana.jpg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/dona-benta/dona-brownie.jpg",
+      "source": "https://www.cozinhadonabenta.com.br/wp-content/uploads/2023/07/site-cozinha-dona-benta-brownie-no-ramequin-com-sorvete-05.jpg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/dona-benta/dona-cake.jpg",
+      "source": "https://www.cozinhadonabenta.com.br/wp-content/uploads/2023/07/site-cozinha-dona-benta-bolo-de-laranja-com-fondant-01.jpg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/dona-benta/dona-flour.jpg",
+      "source": "https://www.cozinhadonabenta.com.br/wp-content/uploads/2018/11/site-jmacedo-farinha-de-trigo-dona-benta-tipo-1-1kg-saco-2023.jpg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/dona-benta/dona-lasagna.jpg",
+      "source": "https://www.cozinhadonabenta.com.br/wp-content/uploads/2023/07/site-cozinha-dona-benta-lasanha-de-queijo-e-presunto-na-airfryer-07.jpg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/dona-benta/dona-logo.png",
+      "source": "https://www.cozinhadonabenta.com.br/wp-content/themes/cdb_2023/images/logo_dona-benta.png",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-bun.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/P%C3%A3o_2021-01-27-140007.png?mtime=20210127080008&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-chicken.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/site_BK_Chicken.png?mtime=20260512100421&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-coke.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/site_Coca.png?mtime=20260512091824&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-double.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/site_Whopper_Duplo.png?mtime=20260512100130&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-fries.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/site_Batata_Media.png?mtime=20260507103554&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-lettuce.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/Alface_2021-01-27-135720.png?mtime=20210127075721&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-logo.svg",
+      "source": "https://www.burgerking.com.br/images/bklogos/BK-novo-logo.svg",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-meat.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/Hamb%C3%BArguer_2021-01-27-135901.png?mtime=20210127075903&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-tomato.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/Tomate_2021-01-27-140111.png?mtime=20210127080112&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/burger-king/bk-whopper-new.png",
+      "source": "https://d3sn2rlrwxy0ce.cloudfront.net/site_Whopper.png?mtime=20260512100127&focal=none",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/doritos/doritos-chili.jpg",
+      "source": "https://down-br.img.susercontent.com/file/sg-11134201-7renz-m87p50zltorb4f",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    },
+    {
+      "path": "assets-landing-pages/doritos/doritos-nacho.jpg",
+      "source": "https://carrefourbr.vtexassets.com/arquivos/ids/118251765/b988381f70b1409fb92aa91360660493.jpg?v=638217325456500000",
+      "role": "imagem de referência pública usada no estudo conceitual"
+    }
+  ]
+}

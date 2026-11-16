@@ -1,0 +1,163 @@
+{
+  "notes": [
+    "Dimensões são artboards de referência, não alturas fixas exigidas na implementação.",
+    "Fotos de produtos usam object-fit contain; as imagens de receitas podem usar cover.",
+    "Assets com transparência têm margens internas; recorte o enquadramento com CSS sem deformar o produto.",
+    "Doritos: os arquivos .jpg têm fundo branco. O conceito usa cards brancos inclinados e enquadramentos; não há recorte transparente nesses packs.",
+    "Doritos Queijo Nacho: crop de referência no arquivo 1000×1000: x177 y25 largura640 altura950. Sweet Chili: x200 y15 largura600 altura970.",
+    "Manrope local está em portfolio/assets/. Fontes de títulos adicionais em fonts-landing-pages/."
+  ],
+  "brands": {
+    "itau": {
+      "name": "Itaú",
+      "palette": {
+        "primary": "#ec7000",
+        "ink": "#17324d",
+        "background": "#fff9f2",
+        "soft": "#f2e9dd"
+      },
+      "typography": {
+        "headingFamily": "Manrope",
+        "headingWeight": 700,
+        "headingStyle": "normal",
+        "bodyFamily": "Manrope"
+      },
+      "referenceSizes": {
+        "desktop": {
+          "width": 1440,
+          "height": 3370,
+          "file": "designs/01-itau/01-Itau-Desktop.svg"
+        },
+        "mobile": {
+          "width": 390,
+          "height": 3830,
+          "file": "designs/01-itau/01-Itau-Mobile.svg"
+        }
+      },
+      "desktopMargin": 80,
+      "mobileMargin": 24,
+      "suggestedRoute": "landing-pages/itau/index.html"
+    },
+    "nescau": {
+      "name": "Nescau",
+      "palette": {
+        "primary": "#cd172b",
+        "accent": "#ffda24",
+        "background": "#fff8ea",
+        "ink": "#35201f"
+      },
+      "typography": {
+        "headingFamily": "DejaVu Sans Condensed",
+        "headingWeight": 700,
+        "headingStyle": "normal",
+        "bodyFamily": "Manrope"
+      },
+      "referenceSizes": {
+        "desktop": {
+          "width": 1440,
+          "height": 3290,
+          "file": "designs/02-nescau/02-Nescau-Desktop.svg"
+        },
+        "mobile": {
+          "width": 390,
+          "height": 4155,
+          "file": "designs/02-nescau/02-Nescau-Mobile.svg"
+        }
+      },
+      "desktopMargin": 80,
+      "mobileMargin": 24,
+      "suggestedRoute": "landing-pages/nescau/index.html"
+    },
+    "dona-benta": {
+      "name": "Farinha Dona Benta",
+      "palette": {
+        "primary": "#203b60",
+        "accent": "#af4739",
+        "background": "#fbf5e9",
+        "soft": "#e8dfcb"
+      },
+      "typography": {
+        "headingFamily": "URW Bookman",
+        "headingWeight": 400,
+        "headingStyle": "normal",
+        "bodyFamily": "Manrope"
+      },
+      "referenceSizes": {
+        "desktop": {
+          "width": 1440,
+          "height": 3500,
+          "file": "designs/03-dona-benta/03-Dona-Benta-Desktop.svg"
+        },
+        "mobile": {
+          "width": 390,
+          "height": 4200,
+          "file": "designs/03-dona-benta/03-Dona-Benta-Mobile.svg"
+        }
+      },
+      "desktopMargin": 80,
+      "mobileMargin": 24,
+      "suggestedRoute": "landing-pages/dona-benta/index.html"
+    },
+    "burger-king": {
+      "name": "Burger King",
+      "palette": {
+        "primary": "#d62300",
+        "ink": "#502314",
+        "background": "#f5ebdc",
+        "accent": "#ff8732"
+      },
+      "typography": {
+        "headingFamily": "URW Bookman",
+        "headingWeight": 700,
+        "headingStyle": "normal",
+        "bodyFamily": "Manrope"
+      },
+      "referenceSizes": {
+        "desktop": {
+          "width": 1440,
+          "height": 3410,
+          "file": "designs/04-burger-king/04-Burger-King-Desktop.svg"
+        },
+        "mobile": {
+          "width": 390,
+          "height": 4215,
+          "file": "designs/04-burger-king/04-Burger-King-Mobile.svg"
+        }
+      },
+      "desktopMargin": 80,
+      "mobileMargin": 24,
+      "suggestedRoute": "landing-pages/burger-king/index.html"
+    },
+    "doritos": {
+      "name": "Doritos",
+      "palette": {
+        "background": "#111113",
+        "ink": "#faf6ec",
+        "primary": "#ec321e",
+        "accent": "#ffdf40",
+        "purple": "#a38bff"
+      },
+      "typography": {
+        "headingFamily": "DejaVu Sans Condensed",
+        "headingWeight": 700,
+        "headingStyle": "italic",
+        "bodyFamily": "Manrope"
+      },
+      "referenceSizes": {
+        "desktop": {
+          "width": 1440,
+          "height": 3335,
+          "file": "designs/05-doritos/05-Doritos-Desktop.svg"
+        },
+        "mobile": {
+          "width": 390,
+          "height": 4050,
+          "file": "designs/05-doritos/05-Doritos-Mobile.svg"
+        }
+      },
+      "desktopMargin": 80,
+      "mobileMargin": 24,
+      "suggestedRoute": "landing-pages/doritos/index.html"
+    }
+  }
+}
