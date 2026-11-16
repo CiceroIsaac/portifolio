@@ -8,7 +8,7 @@ Portfólio de **Cícero Isaac**, estudante de Ciência da Computação na UFCA e
 - TypeScript + React 19
 - [Tailwind CSS v4](https://tailwindcss.com/) nas landing pages
 - ESLint (`eslint-config-next`)
-- Fontes locais via `next/font` (Manrope, DejaVu Sans Condensed, URW Bookman)
+- Fontes via `next/font` (Manrope, DejaVu Sans Condensed e URW Bookman locais; Poppins do Google Fonts, servida pelo próprio site)
 
 ## Executar localmente
 
@@ -64,6 +64,18 @@ portfolio/             # versão estática original (HTML/CSS/JS), mantida como 
 - **Export estático com `trailingSlash`**: cada rota vira uma pasta com `index.html`, e os links entre portfólio e landing pages são relativos.
 - **Produtos sem distorção**: `ProductCrop` (Burger King) e `PackCrop` (Doritos) enquadram fotos com margens transparentes ou brancas mantendo a proporção original.
 - **Acessibilidade**: navegação por âncoras, menu mobile com teclado e Escape, foco visível e respeito a `prefers-reduced-motion`.
+- **Animações**: entrada ao rolar com um único `IntersectionObserver` (`RevealObserver`), tokens de animação no tema do Tailwind e `motion.css` no portfólio (a hero não é alterada). Sem JavaScript ou com movimento reduzido, tudo aparece parado.
+- **Abertura do portfólio**: vinheta de ~2,6 s na primeira visita da sessão, com botão "Pular" e tecla Escape; não toca com movimento reduzido nem quando a URL aponta para uma seção.
+
+### Seções interativas das landing pages
+
+| Página | Seção |
+|---|---|
+| Itaú | "Um objetivo de cada vez": abas com etapas e barra de progresso |
+| Nescau | "Qual é o seu momento?": seletor de momentos do dia |
+| Dona Benta | "Da farinha à mesa": linha do tempo que se desenha ao rolar |
+| Burger King | "Monte o seu": montador de sanduíche em camadas |
+| Doritos | "Qual é a sua intensidade hoje?": medidor com slider |
 
 ## Sobre as landing pages
 
@@ -79,6 +91,7 @@ O projeto segue [Conventional Commits](https://www.conventionalcommits.org/pt-br
 - `fix`: correção
 - `build`: dependências e configuração de build
 - `docs`: documentação
+- `style`: ajustes visuais sem mudança de comportamento
 - `chore`: tarefas de manutenção
 
 ## Contato

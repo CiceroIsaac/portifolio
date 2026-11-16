@@ -22,7 +22,7 @@ Consulte `documentacao/design-tokens.json` para cores, fontes e enquadramentos. 
 
 ## O que preservar no portfólio
 
-- Hero inteira, incluindo aparência, animação, código ilustrativo, ritmo da digitação e controles. O usuário foi explícito: não mexer.
+- Hero inteira, incluindo aparência, animação, código ilustrativo, ritmo da digitação e controles. O usuário foi explícito: não mexer. A abertura (`Intro`, `intro.css`) apenas pausa a entrada da hero enquanto toca; as animações do restante da página ficam em `motion.css`.
 - Organização, cores, seções, filtros, diálogos e contato.
 - Menu mobile animado e suporte a `prefers-reduced-motion`.
 - Tecnologias começando por TypeScript, JavaScript e NestJS.
@@ -63,7 +63,7 @@ Os dois grupos de rotas têm layouts raiz separados: a navegação entre portfó
 
 - **Itaú**: laranja, azul profundo, fundo quente claro, Manrope; interface de app e cartão ilustrativos, composição limpa.
 - **Nescau**: vermelho e amarelo, títulos fortes em caixa alta, raio gráfico, produto protagonista e conteúdo de receitas.
-- **Dona Benta**: creme, azul e terracota, serifas Bookman, fotografia de receitas, clima acolhedor e editorial.
+- **Dona Benta**: creme, azul e terracota, **Poppins** em toda a página (o usuário pediu para trocar a Bookman), fotografia de receitas, clima acolhedor e editorial.
 - **Burger King**: creme, marrom e vermelho; Bookman pesada, sanduíche grande, ingredientes e acompanhamentos.
 - **Doritos**: preto, vermelho, amarelo e roxo; tipografia inclinada, triângulos e composição gráfica. O wordmark do cabeçalho é uma interpretação tipográfica do conceito; os packs usam fotos reais.
 
