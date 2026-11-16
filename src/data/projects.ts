@@ -107,11 +107,11 @@ export const projects: Project[] = [
   }),
   landingStudy("dona-benta", "Farinha Dona Benta", "03", {
     summary:
-      "Landing page conceitual inspirada na Farinha Dona Benta: creme, azul e terracota, serifa Bookman e fotografia de receitas em um clima acolhedor e editorial.",
+      "Landing page conceitual inspirada na Farinha Dona Benta: rosa, azul e amarelo, tipografia Poppins, padrão de azulejo inspirado na embalagem e fotografia de receitas em um clima acolhedor.",
     points: [
-      "Hero com arco, foto circular e card do produto, reorganizada no mobile.",
+      "Hero com grifo no título, foto circular com anel animado, selo e card do produto.",
       "Caderno de receitas com cards responsivos e <details> no lugar de links sem destino.",
-      "Fontes locais (URW Bookman e Manrope) carregadas com next/font.",
+      "Linha do tempo \"Da farinha à mesa\" que se desenha ao rolar e bordas recortadas como o selo da marca.",
     ],
   }),
   landingStudy("burger-king", "Burger King", "04", {

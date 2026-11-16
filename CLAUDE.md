@@ -63,7 +63,7 @@ Os dois grupos de rotas têm layouts raiz separados: a navegação entre portfó
 
 - **Itaú**: laranja, azul profundo, fundo quente claro, Manrope; interface de app e cartão ilustrativos, composição limpa.
 - **Nescau**: vermelho e amarelo, títulos fortes em caixa alta, raio gráfico, produto protagonista e conteúdo de receitas.
-- **Dona Benta**: creme, azul e terracota, **Poppins** em toda a página (o usuário pediu para trocar a Bookman), fotografia de receitas, clima acolhedor e editorial.
+- **Dona Benta** (reestruturada a pedido do usuário): **rosa, azul e amarelo**, Poppins em toda a página, padrão de azulejo da embalagem, bordas recortadas (festonê) e fotografia de receitas. O design SVG original de Dona Benta não é mais a referência visual.
 - **Burger King**: creme, marrom e vermelho; Bookman pesada, sanduíche grande, ingredientes e acompanhamentos.
 - **Doritos**: preto, vermelho, amarelo e roxo; tipografia inclinada, triângulos e composição gráfica. O wordmark do cabeçalho é uma interpretação tipográfica do conceito; os packs usam fotos reais.
 
