@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RevealObserver } from "@/components/landing/RevealObserver";
 import { manrope } from "@/lib/fonts";
 import "./landing.css";
 
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
 export default function LandingLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={manrope.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <RevealObserver />
+      </body>
     </html>
   );
 }
