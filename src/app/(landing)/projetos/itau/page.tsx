@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { AppIllustration } from "@/components/landing/itau/AppIllustration";
+import { PlansTabs } from "@/components/landing/itau/PlansTabs";
 import { CardIcon, CheckCircleIcon, HeartIcon, PhoneIcon, SparkleIcon } from "@/components/landing/itau/icons";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyCta } from "@/components/landing/StudyCta";
@@ -59,7 +60,7 @@ const CHECKLIST = [
 
 /** Botões arredondados do design (laranja e azul). */
 const BTN =
-  "items-center justify-between gap-6 rounded-full px-6 py-3.5 text-[15px] font-bold transition-colors duration-200";
+  "group items-center justify-between gap-6 rounded-full px-6 py-3.5 text-[15px] font-bold transition-colors duration-200";
 const BTN_ORANGE = `${BTN} inline-flex bg-itau-orange text-white hover:bg-[#d46400] focus-visible:outline-itau-ink`;
 const BTN_INK = `${BTN} bg-itau-ink text-white hover:bg-[#0f2236] focus-visible:outline-itau-orange`;
 
@@ -95,25 +96,28 @@ export default function ItauPage() {
         {/* Hero */}
         <section id="inicio" aria-labelledby="itau-title" className="overflow-hidden">
           <div className={`${WRAP} grid items-center gap-12 pt-10 pb-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-start xl:grid-cols-[1fr_620px] lg:gap-8 lg:pt-16`}>
+            {/* Entrada em sequência ao carregar a página */}
             <div>
-              <p className="text-xs font-bold tracking-[0.14em] text-itau-orange uppercase">
+              <p className="text-xs font-bold tracking-[0.14em] text-itau-orange uppercase motion-safe:animate-hero-in">
                 Mais possibilidades para a sua vida
               </p>
               <h1
                 id="itau-title"
-                className="mt-6 text-[clamp(2.75rem,5.7vw,5.125rem)] leading-[1.1] font-bold tracking-[-0.02em] lg:mt-8"
+                className="anim-delay-1 mt-6 text-[clamp(2.75rem,5.7vw,5.125rem)] leading-[1.1] font-bold tracking-[-0.02em] motion-safe:animate-hero-in lg:mt-8"
               >
                 Seu próximo passo começa aqui.
               </h1>
-              <p className="mt-6 max-w-[520px] text-lg leading-relaxed text-itau-ink/80 lg:mt-16 lg:text-[21px]">
+              <p className="anim-delay-2 mt-6 max-w-[520px] text-lg leading-relaxed text-itau-ink/80 motion-safe:animate-hero-in lg:mt-16 lg:text-[21px]">
                 Um banco que acompanha seus planos. Do primeiro movimento às grandes conquistas.
               </p>
-              <a href="#solucoes" className={`${BTN_ORANGE} mt-8 w-full sm:w-auto lg:mt-12`}>
-                Descubra possibilidades <ArrowRight />
+              <a href="#solucoes" className={`${BTN_ORANGE} anim-delay-3 mt-8 w-full motion-safe:animate-hero-in sm:w-auto lg:mt-12`}>
+                Descubra possibilidades <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <p className="mt-8 text-[13px] text-itau-ink/70">Tudo no seu tempo. Tudo no seu app.</p>
+              <p className="anim-delay-4 mt-8 text-[13px] text-itau-ink/70 motion-safe:animate-hero-in">
+                Tudo no seu tempo. Tudo no seu app.
+              </p>
             </div>
-            <div className="mr-[-24px] ml-6 sm:mx-auto sm:w-[80%] lg:mx-0 lg:w-auto">
+            <div className="anim-delay-2 mr-[-24px] ml-6 motion-safe:animate-hero-in sm:mx-auto sm:w-[80%] lg:mx-0 lg:w-auto">
               <AppIllustration />
             </div>
           </div>
@@ -125,7 +129,8 @@ export default function ItauPage() {
             {HIGHLIGHTS.map(({ title, text, Icon }, i) => (
               <li
                 key={title}
-                className={`items-start gap-4 rounded-2xl bg-white px-6 py-6 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 ${
+                style={{ "--reveal-delay": `${i * 100}ms` } as React.CSSProperties}
+                className={`reveal items-start gap-4 rounded-2xl bg-white px-6 py-6 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 ${
                   // No mobile o design mostra só os dois primeiros destaques.
                   i > 1 ? "hidden sm:flex" : "flex"
                 }`}
@@ -142,7 +147,7 @@ export default function ItauPage() {
 
         {/* Possibilidades / soluções */}
         <section id="solucoes" aria-labelledby="solucoes-title" className={`${WRAP} pt-24 pb-24 lg:pt-32 lg:pb-28`}>
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="reveal grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <p className="text-xs font-bold tracking-[0.14em] text-itau-orange uppercase">Possibilidades</p>
               <h2 id="solucoes-title" className="mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-[1.2] font-bold">
@@ -156,9 +161,11 @@ export default function ItauPage() {
             </p>
           </div>
           <ul className="mt-14 grid gap-5 lg:grid-cols-3">
-            {SOLUTIONS.map(({ title, text, href, Icon }) => (
-              <li key={title} className="flex flex-col rounded-2xl bg-itau-soft p-7 lg:min-h-[320px] lg:p-8">
-                <Icon className="size-8 text-itau-orange" />
+            {SOLUTIONS.map(({ title, text, href, Icon }, i) => (
+              // `reveal` no <li>; o hover (elevar) fica no card interno para não herdar o atraso da entrada.
+              <li key={title} className="reveal flex" style={{ "--reveal-delay": `${i * 120}ms` } as React.CSSProperties}>
+                <div className="group/card flex w-full flex-col rounded-2xl bg-itau-soft p-7 transition-[translate,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(23,50,77,.12)] lg:min-h-[320px] lg:p-8">
+                <Icon className="size-8 text-itau-orange transition-transform duration-300 group-hover/card:scale-110 group-hover/card:-rotate-6" />
                 <h3 className="mt-6 text-[22px] font-bold lg:text-2xl">{title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-itau-ink/70 lg:text-[17px]">{text}</p>
                 <a
@@ -170,15 +177,29 @@ export default function ItauPage() {
                   </span>
                   <ArrowRight className="size-6 transition-transform group-hover:translate-x-1" />
                 </a>
+                </div>
               </li>
             ))}
           </ul>
         </section>
 
+        {/* Nova seção: objetivos no app (abas interativas) */}
+        <section id="planos" aria-labelledby="planos-title" className={`${WRAP} pb-24 lg:pb-32`}>
+          <div className="reveal">
+            <p className="text-xs font-bold tracking-[0.14em] text-itau-orange uppercase">Seus planos no app</p>
+            <h2 id="planos-title" className="mt-6 mb-10 text-[clamp(2rem,3.4vw,3rem)] leading-[1.2] font-bold">
+              Um objetivo de cada vez.
+            </h2>
+          </div>
+          <div className="reveal" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
+            <PlansTabs />
+          </div>
+        </section>
+
         {/* A vida acontece agora */}
         <section id="vida" aria-labelledby="vida-title" className="lg:px-10">
           <div className="mx-auto grid max-w-[1280px] overflow-hidden bg-[#f6d3ad] lg:grid-cols-2 lg:rounded-3xl">
-            <div className="order-2 flex items-end justify-center px-6 pt-4 lg:order-1 lg:pt-14">
+            <div className="reveal reveal-left order-2 flex items-end justify-center px-6 pt-4 lg:order-1 lg:pt-14">
               <Image
                 src={person}
                 alt="Homem sorridente de óculos e camisa laranja usando o celular"
@@ -186,7 +207,7 @@ export default function ItauPage() {
                 className="h-auto w-full max-w-[340px] lg:max-w-[480px]"
               />
             </div>
-            <div className="order-1 self-center px-6 pt-20 lg:order-2 lg:px-0 lg:py-24 lg:pr-20">
+            <div className="reveal reveal-right order-1 self-center px-6 pt-20 lg:order-2 lg:px-0 lg:py-24 lg:pr-20">
               <p className="text-xs font-bold tracking-[0.14em] uppercase">A vida acontece agora</p>
               <h2 id="vida-title" className="mt-6 text-[clamp(1.85rem,3.3vw,2.95rem)] leading-[1.22] font-bold">
                 Menos complicação. <br className="hidden lg:block" />
@@ -206,7 +227,7 @@ export default function ItauPage() {
         <section id="no-seu-ritmo" aria-labelledby="ritmo-title" className="bg-itau-ink text-white lg:mt-14">
           {/* Mobile: título → imagem → lista. Desktop: título e lista à esquerda, imagem à direita. */}
           <div className={`${WRAP} grid gap-10 py-16 lg:grid-cols-2 lg:grid-rows-[auto_auto] lg:gap-x-8 lg:gap-y-16 lg:py-20`}>
-            <div className="lg:self-end">
+            <div className="reveal lg:self-end">
               <p className="text-xs font-bold tracking-[0.14em] text-[#ff9d3d] uppercase">Um app. Muitas possibilidades.</p>
               <h2 id="ritmo-title" className="mt-6 text-[clamp(2rem,4vw,3.6rem)] leading-[1.15] font-bold">
                 Seu banco cabe <br />
@@ -214,14 +235,18 @@ export default function ItauPage() {
               </h2>
             </div>
             <ul className="order-last space-y-6 lg:order-none lg:col-start-1 lg:row-start-2">
-              {CHECKLIST.map((item) => (
-                <li key={item} className="flex items-center gap-4 text-[17px]">
+              {CHECKLIST.map((item, i) => (
+                <li
+                  key={item}
+                  className="reveal reveal-left flex items-center gap-4 text-[17px]"
+                  style={{ "--reveal-delay": `${i * 140}ms` } as React.CSSProperties}
+                >
                   <CheckCircleIcon className="size-6 shrink-0 text-itau-orange" />
                   {item}
                 </li>
               ))}
             </ul>
-            <figure className="flex flex-col items-center gap-5 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center">
+            <figure className="reveal reveal-zoom flex flex-col items-center gap-5 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center">
               <Image
                 src={hands}
                 alt="Mãos segurando um celular com uma tela de organização financeira ilustrativa"
@@ -237,7 +262,7 @@ export default function ItauPage() {
 
         {/* Próximo passo */}
         <section id="proximo-passo" aria-labelledby="proximo-title" className={`${WRAP} py-16 lg:py-20`}>
-          <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="reveal flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
             <h2 id="proximo-title" className="text-[clamp(1.75rem,2.9vw,2.6rem)] leading-tight font-bold">
               Vamos dar o próximo passo?
             </h2>

@@ -20,8 +20,8 @@ export function AppIllustration() {
           <path d="M175 24 A318 318 0 0 0 -6 380" stroke="#ec7000" strokeWidth="2.5" strokeLinecap="round" />
         </svg>
 
-        {/* Celular */}
-        <div className="absolute top-[12.6%] left-[27.7%] flex h-[90%] w-[45%] flex-col overflow-hidden rounded-[7cqw] border-[1cqw] border-itau-ink bg-white">
+        {/* Celular (flutua devagar) */}
+        <div className="absolute top-[12.6%] left-[27.7%] flex h-[90%] w-[45%] flex-col motion-safe:animate-float overflow-hidden rounded-[7cqw] border-[1cqw] border-itau-ink bg-white">
           <div className="mx-auto mt-[2.2cqw] h-[3.6cqw] w-[14cqw] rounded-full bg-itau-ink" />
           <div className="mt-[3.4cqw] bg-itau-orange px-[3.6cqw] py-[4cqw] text-white">
             <p className="text-[2.1cqw] font-bold">Olá, seu próximo passo.</p>
@@ -50,8 +50,8 @@ export function AppIllustration() {
           <div className="mx-auto mt-auto mb-[4.4cqw] h-[0.5cqw] w-[13cqw] rounded-full bg-itau-ink" />
         </div>
 
-        {/* Cartão ilustrativo inclinado */}
-        <div className="absolute top-[57%] left-[0.5%] aspect-[1.62] w-[44%] -rotate-12 rounded-[2.6cqw] bg-itau-ink p-[3.6cqw] text-white shadow-[0_2cqw_4cqw_rgba(23,50,77,.25)]">
+        {/* Cartão ilustrativo inclinado (flutua em outro ritmo) */}
+        <div className="absolute top-[57%] left-[0.5%] aspect-[1.62] w-[44%] -rotate-12 [animation-delay:-3s] motion-safe:animate-float-slow rounded-[2.6cqw] bg-itau-ink p-[3.6cqw] text-white shadow-[0_2cqw_4cqw_rgba(23,50,77,.25)]">
           <Image src={logo} alt="" className="size-[7.4cqw] rounded-[1.4cqw]" />
           <p className="mt-[3.2cqw] text-[3.3cqw] font-medium">Seu mundo</p>
           <p className="mt-[1.6cqw] text-[1.45cqw] tracking-[0.14em] text-white/60">CARTÃO ILUSTRATIVO</p>
