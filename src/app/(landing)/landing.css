@@ -28,10 +28,15 @@
   --color-nescau-bg: #fff8ea;
   --color-nescau-ink: #35201f;
 
-  --color-benta-blue: #203b60;
-  --color-benta-terracotta: #af4739;
-  --color-benta-bg: #fbf5e9;
-  --color-benta-soft: #e8dfcb;
+  /* Dona Benta: rosa, azul e amarelo (pedido do usuário) */
+  --color-benta-navy: #172b5a;
+  --color-benta-blue: #1d4b9b;
+  --color-benta-sky: #cfe6f8;
+  --color-benta-pink: #f28bab;
+  --color-benta-pink-soft: #fde6ee;
+  --color-benta-yellow: #ffd23f;
+  --color-benta-yellow-soft: #fff3c7;
+  --color-benta-bg: #fffaf6;
 
   --color-bk-red: #d62300;
   --color-bk-brown: #502314;

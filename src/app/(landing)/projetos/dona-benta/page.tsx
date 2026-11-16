@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
+import { ScallopEdge, Sticker, TilePattern } from "@/components/landing/dona-benta/Decor";
+import { Marquee } from "@/components/landing/Marquee";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyFooter } from "@/components/landing/StudyFooter";
 import { ArrowRight, WRAP } from "@/components/landing/ui";
@@ -15,24 +17,47 @@ export const metadata: Metadata = {
   description: "Estudo conceitual de landing page inspirado na Farinha Dona Benta. Projeto de portfólio, não oficial.",
 };
 
+/**
+ * Direção visual (revisão pedida pelo usuário): rosa, azul e amarelo,
+ * Poppins, padrão de azulejo (estampa da embalagem) e bordas recortadas
+ * (festonê, como o selo do logotipo).
+ */
+
 const NAV: NavLink[] = [
   { href: "#receitas", label: "Receitas" },
   { href: "#produtos", label: "Nossos produtos" },
   { href: "#afeto", label: "Cozinha com afeto" },
 ];
 
-const RECIPES: { tag: string; title: string; image: StaticImageData; alt: string }[] = [
-  { tag: "Doce · Bolo", title: "Bolo para compartilhar", image: cake, alt: "Bolo com cobertura e raspas de laranja" },
+/** Cada receita tem uma cor de destaque (etiqueta e sombra do card). */
+const RECIPES: { tag: string; title: string; image: StaticImageData; alt: string; accent: string; shadow: string }[] = [
+  {
+    tag: "Doce · Bolo",
+    title: "Bolo para compartilhar",
+    image: cake,
+    alt: "Bolo com cobertura e raspas de laranja",
+    accent: "bg-benta-pink text-benta-navy",
+    shadow: "shadow-[8px_8px_0_var(--color-benta-pink)]",
+  },
   {
     tag: "Doce · Brownie",
     title: "Um carinho de chocolate",
     image: brownie,
     alt: "Brownie em ramequim com sorvete, calda de chocolate e frutas vermelhas",
+    accent: "bg-benta-yellow text-benta-navy",
+    shadow: "shadow-[8px_8px_0_var(--color-benta-yellow)]",
   },
-  { tag: "Salgado · Massas", title: "Almoço que reúne", image: lasagna, alt: "Massa gratinada em travessa de vidro" },
+  {
+    tag: "Salgado · Massas",
+    title: "Almoço que reúne",
+    image: lasagna,
+    alt: "Massa gratinada em travessa de vidro",
+    accent: "bg-benta-blue text-white",
+    shadow: "shadow-[8px_8px_0_var(--color-benta-blue)]",
+  },
 ];
 
-/** Nova seção: momentos do preparo (sem quantidades nem passo a passo de receita). */
+/** Momentos do preparo (sem quantidades nem passo a passo de receita). */
 const JOURNEY = [
   { title: "Separar", text: "Ingredientes na mesa e o caderno aberto na página certa." },
   { title: "Misturar", text: "Mão na massa, sem pressa, do jeito que alguém ensinou." },
@@ -42,120 +67,172 @@ const JOURNEY = [
 
 const USES = ["Para o bolo do fim de tarde", "Para uma massa feita em casa", "Para descobrir sua próxima receita"];
 
-/** Títulos: Poppins Medium, com espaçamento levemente fechado. */
-const HEADING = "font-poppins font-medium leading-[1.15] tracking-[-0.025em]";
-const EYEBROW = "text-xs font-bold tracking-[0.14em] uppercase";
-const BTN = "items-center justify-between gap-6 rounded-full px-6 py-3.5 text-[15px] font-bold transition-colors duration-200";
-const BTN_BLUE = `${BTN} bg-benta-blue text-white hover:bg-[#162a46] focus-visible:outline-benta-blue`;
-const BTN_CREAM = `${BTN} bg-benta-bg text-benta-blue hover:bg-white focus-visible:outline-benta-bg`;
+/** Títulos: Poppins SemiBold, espaçamento fechado. */
+const HEADING = "font-poppins font-semibold leading-[1.1] tracking-[-0.03em]";
+/** Etiqueta em pílula (sobretítulo das seções). */
+const PILL = "inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-[0.12em] uppercase";
+const BTN = "group items-center justify-between gap-6 rounded-full px-6 py-3.5 text-[15px] font-bold transition-[background-color,translate] duration-200 hover:-translate-y-0.5";
+const BTN_BLUE = `${BTN} bg-benta-blue text-white hover:bg-benta-navy focus-visible:outline-benta-blue`;
+const BTN_YELLOW = `${BTN} bg-benta-yellow text-benta-navy hover:bg-white focus-visible:outline-benta-yellow`;
+const ARROW = "size-5 transition-transform group-hover:translate-x-1";
+
+/** Atraso escalonado para itens com a classe `reveal`. */
+const delay = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as React.CSSProperties;
 
 function CheckIcon({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" className={className}>
-      <circle cx="12" cy="12" r="9" />
-      <path d="m8 12.3 2.6 2.6L16.2 9" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+      <circle cx="12" cy="12" r="11" fill="currentColor" />
+      <path d="m7.5 12.3 3 3L16.8 9" fill="none" stroke="#172b5a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** Coração pequeno (decorativo). */
+function Heart({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+      <path fill="currentColor" d="M12 21s-8.5-5.2-8.5-11.2A4.7 4.7 0 0 1 12 6.6a4.7 4.7 0 0 1 8.5 3.2C20.5 15.8 12 21 12 21Z" />
     </svg>
   );
 }
 
 export default function DonaBentaPage() {
   return (
-    <div className={`${poppins.variable} overflow-x-clip bg-benta-bg font-poppins text-benta-blue`}>
+    <div className={`${poppins.variable} overflow-x-clip bg-benta-bg font-poppins text-benta-navy`}>
       {/* Cabeçalho */}
-      <header className="sticky top-0 z-40 bg-benta-bg/95 backdrop-blur">
-        <div className={`${WRAP} relative flex h-20 items-center justify-between lg:h-[118px]`}>
+      <header className="sticky top-0 z-40 bg-benta-pink-soft/95 backdrop-blur">
+        <div className={`${WRAP} relative flex h-20 items-center justify-between lg:h-24`}>
           <a href="#inicio" aria-label="Dona Benta, início do conceito" className="rounded-full">
-            <Image src={logo} alt="" priority className="size-14 lg:size-[100px]" />
+            <Image src={logo} alt="" priority className="size-14 transition-transform duration-300 hover:-rotate-6 lg:size-[76px]" />
           </a>
-          <nav aria-label="Seções da página" className="hidden gap-16 lg:flex xl:gap-20">
+          <nav aria-label="Seções da página" className="hidden gap-14 lg:flex">
             {NAV.map((link) => (
-              <a key={link.href} href={link.href} className="text-sm font-bold hover:text-benta-terracotta">
+              <a
+                key={link.href}
+                href={link.href}
+                className="relative py-1 text-sm font-semibold after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded after:bg-benta-pink after:transition-transform hover:after:scale-x-100"
+              >
                 {link.label}
               </a>
             ))}
           </nav>
           <a href="#receitas" className={`${BTN_BLUE} hidden lg:inline-flex`}>
-            Encontre uma receita <ArrowRight />
+            Encontre uma receita <ArrowRight className={ARROW} />
           </a>
           <MobileMenu
             links={[...NAV, { href: "#receitas", label: "Encontre uma receita" }]}
-            buttonClassName="text-benta-blue hover:bg-benta-soft"
-            panelClassName="border-b border-benta-blue/10 bg-benta-bg shadow-lg"
-            linkClassName="font-bold hover:text-benta-terracotta"
+            buttonClassName="text-benta-navy hover:bg-white/60"
+            panelClassName="border-b border-benta-navy/10 bg-benta-pink-soft shadow-lg"
+            linkClassName="font-semibold hover:text-benta-blue"
           />
         </div>
       </header>
 
       <main>
-        {/* Hero */}
-        <section id="inicio" aria-labelledby="benta-title" className={WRAP}>
-          <div className="grid items-center gap-10 pt-8 pb-14 lg:grid-cols-[1fr_minmax(0,560px)] lg:pt-4 lg:pb-16">
+        {/* Hero: rosa com azulejos, grifo amarelo e composição do bolo */}
+        <section id="inicio" aria-labelledby="benta-title" className="relative bg-benta-pink-soft">
+          <TilePattern className="text-benta-pink/25" />
+          <div className={`${WRAP} relative grid items-center gap-12 pt-8 pb-16 lg:grid-cols-[1.05fr_1fr] lg:pt-10 lg:pb-24`}>
             <div>
-              <p className={`${EYEBROW} text-benta-terracotta motion-safe:animate-hero-in`}>O melhor ingrediente é estar junto.</p>
-              <h1 id="benta-title" className={`${HEADING} anim-delay-1 mt-5 text-[clamp(2.4rem,5.35vw,4.8rem)] motion-safe:animate-hero-in lg:mt-6`}>
-                Tem carinho <br />
-                nessa receita.
+              <p className={`${PILL} bg-benta-yellow motion-safe:animate-hero-in`}>O melhor ingrediente é estar junto</p>
+              <h1 id="benta-title" className={`${HEADING} anim-delay-1 mt-6 text-[clamp(2.7rem,6vw,5.6rem)] motion-safe:animate-hero-in`}>
+                Tem{" "}
+                {/* Grifo amarelo atrás da palavra-chave */}
+                <span className="bg-[linear-gradient(transparent_58%,var(--color-benta-yellow)_58%,var(--color-benta-yellow)_92%,transparent_92%)] px-1">
+                  carinho
+                </span>{" "}
+                nessa <span className="text-benta-blue">receita.</span>
               </h1>
-              <p className="anim-delay-2 mt-6 max-w-[500px] text-lg leading-relaxed text-benta-blue/75 motion-safe:animate-hero-in lg:mt-12 lg:text-[21px]">
+              <p className="anim-delay-2 mt-6 max-w-[500px] text-lg leading-relaxed text-benta-navy/75 motion-safe:animate-hero-in lg:mt-8 lg:text-xl">
                 Da primeira colher de farinha ao último pedaço: histórias boas começam na cozinha.
               </p>
-              <a href="#receitas" className={`${BTN_BLUE} anim-delay-3 mt-8 inline-flex w-full motion-safe:animate-hero-in sm:w-auto lg:mt-12`}>
-                Vamos cozinhar? <ArrowRight />
-              </a>
-              <p className={`${EYEBROW} mt-20 hidden lg:block`}>A mesa fica melhor com histórias.</p>
+              <div className="anim-delay-3 mt-8 flex flex-col gap-3 motion-safe:animate-hero-in sm:flex-row lg:mt-10">
+                <a href="#receitas" className={`${BTN_BLUE} inline-flex`}>
+                  Vamos cozinhar? <ArrowRight className={ARROW} />
+                </a>
+                <a
+                  href="#produtos"
+                  className={`${BTN} inline-flex border-2 border-benta-navy/15 bg-white/70 text-benta-navy hover:bg-white focus-visible:outline-benta-blue`}
+                >
+                  Conheça a farinha <ArrowRight className={ARROW} />
+                </a>
+              </div>
             </div>
 
-            {/* Arco bege + foto circular + card do produto */}
-            <div className="anim-delay-2 relative mx-auto w-full max-w-[460px] pb-10 motion-safe:animate-hero-in lg:max-w-[560px]">
-              <div aria-hidden="true" className="absolute top-0 right-0 hidden h-[88%] w-[96%] rounded-t-full bg-benta-soft sm:block" />
+            {/* Composição: círculo azul com azulejos, foto com anel girando, selo e pacote */}
+            <div className="anim-delay-2 relative mx-auto aspect-square w-full max-w-[520px] motion-safe:animate-pop">
+              <div className="absolute inset-[4%] overflow-hidden rounded-full bg-benta-blue">
+                <TilePattern className="text-white/15" />
+              </div>
+              {/* Anel tracejado girando devagar */}
+              <div className="absolute inset-[9%] rounded-full border-[3px] border-dashed border-benta-pink motion-safe:animate-spin-slow" />
               <Image
                 src={cake}
                 alt="Bolo com cobertura de açúcar e raspas de laranja em um prato azul"
                 priority
-                sizes="(min-width: 1024px) 520px, 90vw"
-                className="relative ml-auto aspect-square w-[94%] rounded-full object-cover motion-safe:animate-spin-slow sm:mt-[3%] sm:mr-[2%]"
+                sizes="(min-width: 1024px) 420px, 75vw"
+                className="absolute inset-[14%] size-[72%] rounded-full border-[6px] border-white object-cover shadow-[0_24px_50px_rgba(23,43,90,.35)]"
               />
-              <figure className="absolute bottom-0 left-0 flex items-center gap-3 rounded-2xl bg-white p-4 motion-safe:animate-float shadow-[0_10px_30px_rgba(32,59,96,.12)] sm:left-[-4%] sm:p-5">
-                <Image src={flour} alt="Pacote de Farinha de Trigo Dona Benta" sizes="80px" className="h-auto w-14 sm:w-20" />
-                <figcaption className="font-poppins text-sm leading-snug sm:text-base">
-                  Um clássico <br />
+              <Sticker className="absolute top-[2%] right-[2%] size-[27%] motion-safe:animate-wobble">
+                Feito
+                <br />
+                em casa
+              </Sticker>
+              <Heart className="absolute right-[1%] bottom-[22%] size-[9%] text-benta-pink motion-safe:animate-float" />
+              <figure className="absolute bottom-[2%] left-[-2%] flex items-center gap-3 rounded-2xl bg-white p-3 pr-5 shadow-[0_14px_30px_rgba(23,43,90,.18)] motion-safe:animate-float-slow sm:p-4 sm:pr-6">
+                <Image src={flour} alt="Pacote de Farinha de Trigo Dona Benta" sizes="80px" className="h-auto w-12 sm:w-16" />
+                <figcaption className="text-sm leading-snug font-semibold sm:text-base">
+                  Um clássico
+                  <br />
                   da sua cozinha.
-                  <span aria-hidden="true" className="mt-3 block h-0.5 w-16 bg-benta-terracotta" />
                 </figcaption>
               </figure>
             </div>
           </div>
-          <hr className="hidden border-benta-blue/15 lg:block" />
         </section>
+        <ScallopEdge color="var(--color-benta-pink-soft)" />
+
+        {/* Faixa amarela em loop */}
+        <Marquee
+          items={["Feito com carinho", "Receitas de família", "Do forno para a mesa", "Mão na massa"]}
+          separator={<Heart className="size-5 text-benta-pink" />}
+          className="-mx-4 mt-10 -rotate-1 bg-benta-yellow py-4 text-benta-navy"
+          itemClassName="text-lg font-semibold lg:text-2xl"
+        />
 
         {/* Caderno de receitas */}
         <section id="receitas" aria-labelledby="receitas-title" className={`${WRAP} py-16 lg:py-24`}>
-          <p className={`${EYEBROW} reveal text-benta-terracotta`}>Caderno de receitas</p>
-          <h2 id="receitas-title" className={`${HEADING} reveal mt-5 text-[clamp(2rem,3.4vw,3.05rem)]`}>
-            Hoje tem gostinho de quê?
-          </h2>
-          <p className="mt-4 hidden text-lg text-benta-blue/70 sm:block">Escolha uma ideia e coloque a mão na massa.</p>
-          <ul className="mt-10 grid gap-12 md:grid-cols-3 md:gap-6">
+          <div className="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className={`${PILL} bg-benta-pink-soft text-benta-blue`}>Caderno de receitas</p>
+              <h2 id="receitas-title" className={`${HEADING} mt-5 text-[clamp(2rem,3.6vw,3.25rem)]`}>
+                Hoje tem gostinho de quê?
+              </h2>
+            </div>
+            <p className="max-w-[320px] text-base text-benta-navy/70">Escolha uma ideia e coloque a mão na massa.</p>
+          </div>
+          <ul className="mt-12 grid gap-12 md:grid-cols-3 md:gap-8">
             {RECIPES.map((r, i) => (
-              <li key={r.title} className="reveal" style={{ "--reveal-delay": `${i * 140}ms` } as React.CSSProperties}>
-                {/* Zoom suave na foto ao passar o mouse */}
-                <div className="overflow-hidden rounded-2xl">
-                <Image
-                  src={r.image}
-                  alt={r.alt}
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105 md:aspect-[1.25]"
-                />
+              <li key={r.title} className="reveal" style={delay(i * 140)}>
+                {/* Foto com sombra sólida colorida; inclina de leve no hover */}
+                <div className={`group overflow-hidden rounded-3xl ${r.shadow} transition-transform duration-300 hover:-rotate-1`}>
+                  <Image
+                    src={r.image}
+                    alt={r.alt}
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 md:aspect-[1.1]"
+                  />
                 </div>
-                <p className={`${EYEBROW} mt-5 text-benta-terracotta`}>{r.tag}</p>
-                <h3 className={`${HEADING} mt-3 text-[clamp(1.35rem,1.8vw,1.6rem)]`}>{r.title}</h3>
+                <p className={`${PILL} mt-6 ${r.accent}`}>{r.tag}</p>
+                <h3 className={`${HEADING} mt-3 text-[clamp(1.3rem,1.8vw,1.55rem)]`}>{r.title}</h3>
                 {/* Sem receitas oficiais: o "caderno" explica o estudo, sem link vazio. */}
                 <details className="group mt-2">
-                  <summary className="flex cursor-pointer list-none items-center justify-between py-2 text-sm font-bold">
+                  <summary className="flex cursor-pointer list-none items-center justify-between py-2 text-sm font-bold text-benta-blue">
                     Abrir o caderno
                     <ArrowRight className="size-6 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="pt-1 text-sm text-benta-blue/70">
+                  <p className="pt-1 text-sm text-benta-navy/70">
                     Página reservada para a receita completa. Este estudo apresenta a proposta visual, sem receitas
                     oficiais.
                   </p>
@@ -165,105 +242,124 @@ export default function DonaBentaPage() {
           </ul>
         </section>
 
-        {/* Produto */}
-        <section id="produtos" aria-labelledby="produtos-title" className="bg-benta-blue text-benta-bg">
-          <div className={`${WRAP} grid items-center gap-10 py-16 lg:grid-cols-2 lg:gap-x-24 lg:py-20`}>
+        {/* Produto: azul com azulejos */}
+        <ScallopEdge color="var(--color-benta-blue)" flip />
+        <section id="produtos" aria-labelledby="produtos-title" className="relative bg-benta-blue text-white">
+          <TilePattern className="text-white/10" />
+          <div className={`${WRAP} relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:gap-x-24 lg:py-24`}>
             <div className="reveal lg:col-start-2 lg:row-start-1">
-              <p className={`${EYEBROW} text-[#f0c9a0]`}>Para criar novas memórias</p>
-              <h2 id="produtos-title" className={`${HEADING} mt-5 text-[clamp(1.9rem,3.3vw,2.95rem)] lg:mt-8`}>
-                Todo começo pede <br className="hidden sm:block" />
-                um pouco de farinha.
+              <p className={`${PILL} bg-benta-yellow text-benta-navy`}>Para criar novas memórias</p>
+              <h2 id="produtos-title" className={`${HEADING} mt-6 text-[clamp(2rem,3.6vw,3.3rem)]`}>
+                Todo começo pede um pouco de <span className="text-benta-yellow">farinha.</span>
               </h2>
-              <p className="mt-6 max-w-[560px] text-base leading-relaxed text-benta-bg/85 lg:mt-12 lg:text-xl">
+              <p className="mt-6 max-w-[540px] text-base leading-relaxed text-white/85 lg:text-lg">
                 Tem receita que passa de mão em mão. E tem aquela que você inventa hoje. O importante é o que acontece ao
                 redor da mesa.
               </p>
             </div>
-            <div className="reveal reveal-zoom mx-auto grid aspect-square w-[80%] max-w-[450px] place-items-center rounded-full bg-white lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:w-full">
-              <Image
-                src={flour}
-                alt="Pacote de Farinha de Trigo Tradicional Dona Benta"
-                sizes="300px"
-                className="h-auto w-[66%] object-contain motion-safe:animate-float"
-              />
+            {/* Pacote num círculo branco com contorno rosa */}
+            <div className="reveal reveal-zoom relative mx-auto aspect-square w-[78%] max-w-[440px] lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:w-full">
+              <div className="absolute inset-0 rounded-full bg-benta-pink" />
+              <div className="absolute inset-[5%] grid place-items-center rounded-full bg-white">
+                <Image
+                  src={flour}
+                  alt="Pacote de Farinha de Trigo Tradicional Dona Benta"
+                  sizes="300px"
+                  className="h-auto w-[64%] object-contain motion-safe:animate-float"
+                />
+              </div>
+              <Sticker className="absolute -right-[2%] bottom-[6%] size-[30%] motion-safe:animate-wobble">
+                Trigo
+                <br />
+                tradicional
+              </Sticker>
             </div>
-            <div className="lg:col-start-2 lg:row-start-2 lg:self-start">
-              <a href="#afeto" className={`${BTN_CREAM} inline-flex w-full sm:w-auto sm:min-w-[320px]`}>
-                Conheça nossos produtos <ArrowRight />
+            <div className="reveal lg:col-start-2 lg:row-start-2 lg:self-start">
+              <a href="#afeto" className={`${BTN_YELLOW} inline-flex w-full sm:w-auto sm:min-w-[320px]`}>
+                Conheça nossos produtos <ArrowRight className={ARROW} />
               </a>
             </div>
           </div>
         </section>
+        <ScallopEdge color="var(--color-benta-blue)" />
 
         {/* Cozinha com afeto */}
-        <section id="afeto" aria-labelledby="afeto-title" className={`${WRAP} grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-24`}>
+        <section id="afeto" aria-labelledby="afeto-title" className={`${WRAP} grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24`}>
           <div>
-            <p className={`${EYEBROW} reveal text-benta-terracotta`}>Farinha de trigo tradicional</p>
-            <h2 id="afeto-title" className={`${HEADING} reveal mt-5 text-[clamp(2rem,3.75vw,3.4rem)]`}>
-              O começo de <br />
-              tantas coisas boas.
-            </h2>
-            <p className="mt-6 hidden max-w-[540px] text-lg leading-relaxed text-benta-blue/70 sm:block lg:mt-12">
-              Pães, bolos, massas e ideias que ainda vão surgir. Um ingrediente do dia a dia, muitas possibilidades na sua
-              cozinha.
-            </p>
-            <ul className="mt-8 space-y-4 lg:mt-12">
+            <div className="reveal">
+              <p className={`${PILL} bg-benta-pink-soft text-benta-blue`}>Farinha de trigo tradicional</p>
+              <h2 id="afeto-title" className={`${HEADING} mt-5 text-[clamp(2rem,3.9vw,3.5rem)]`}>
+                O começo de <span className="text-benta-pink">tantas coisas boas.</span>
+              </h2>
+              <p className="mt-6 hidden max-w-[520px] text-lg leading-relaxed text-benta-navy/70 sm:block">
+                Pães, bolos, massas e ideias que ainda vão surgir. Um ingrediente do dia a dia, muitas possibilidades na
+                sua cozinha.
+              </p>
+            </div>
+            <ul className="mt-8 space-y-4">
               {USES.map((u, i) => (
-                <li key={u} className="reveal reveal-left flex items-center gap-3 text-[15px]" style={{ "--reveal-delay": `${200 + i * 140}ms` } as React.CSSProperties}>
-                  <CheckIcon className="size-6 shrink-0 text-benta-terracotta" />
+                <li key={u} className="reveal reveal-left flex items-center gap-3 font-medium" style={delay(200 + i * 140)}>
+                  <CheckIcon className="size-7 shrink-0 text-benta-yellow" />
                   {u}
                 </li>
               ))}
             </ul>
           </div>
-          <Image
-            src={brownie}
-            alt="Brownie com sorvete, calda de chocolate e frutas vermelhas em um ramequim laranja"
-            sizes="(min-width: 1024px) 560px, 100vw"
-            className="reveal reveal-right aspect-[4/3] w-full rounded-3xl object-cover lg:ml-auto lg:aspect-square lg:max-w-[562px]"
-          />
+          <div className="reveal reveal-right relative lg:ml-auto lg:w-full lg:max-w-[540px]">
+            <div aria-hidden="true" className="absolute inset-0 translate-x-4 translate-y-4 rounded-[2rem] bg-benta-pink" />
+            <Image
+              src={brownie}
+              alt="Brownie com sorvete, calda de chocolate e frutas vermelhas em um ramequim laranja"
+              sizes="(min-width: 1024px) 540px, 100vw"
+              className="relative aspect-[4/3] w-full rounded-[2rem] object-cover lg:aspect-square"
+            />
+            <Heart className="absolute -top-5 -left-4 size-12 text-benta-blue motion-safe:animate-float" />
+          </div>
         </section>
 
-        {/* Nova seção: da farinha à mesa (linha do tempo que se desenha ao rolar) */}
-        <section aria-labelledby="mesa-title" className="bg-benta-soft/60 py-16 lg:py-24">
+        {/* Da farinha à mesa: linha do tempo que se desenha ao rolar */}
+        <ScallopEdge color="var(--color-benta-yellow-soft)" flip />
+        <section aria-labelledby="mesa-title" className="bg-benta-yellow-soft py-16 lg:py-24">
           <div className={`${WRAP} reveal`}>
-            <p className={`${EYEBROW} text-benta-terracotta`}>Da farinha à mesa</p>
-            <h2 id="mesa-title" className={`${HEADING} mt-5 text-[clamp(2rem,3.4vw,3.05rem)]`}>
+            <p className={`${PILL} bg-benta-yellow`}>Da farinha à mesa</p>
+            <h2 id="mesa-title" className={`${HEADING} mt-5 text-[clamp(2rem,3.6vw,3.25rem)]`}>
               Toda receita tem uma história.
             </h2>
             <ol className="relative mt-12 grid gap-10 md:grid-cols-4 md:gap-6">
-              {/* Linha que liga as etapas: horizontal no desktop, vertical no mobile */}
-              <span aria-hidden="true" className="line-grow absolute top-7 right-[12%] left-[12%] hidden h-0.5 bg-benta-terracotta/50 md:block" />
-              <span aria-hidden="true" className="line-grow line-grow-y absolute top-7 bottom-7 left-7 w-0.5 bg-benta-terracotta/50 md:hidden" />
+              {/* Linha: horizontal no desktop, vertical no mobile */}
+              <span aria-hidden="true" className="line-grow absolute top-7 right-[12%] left-[12%] hidden h-1 rounded bg-benta-pink md:block" />
+              <span aria-hidden="true" className="line-grow line-grow-y absolute top-7 bottom-7 left-[26px] w-1 rounded bg-benta-pink md:hidden" />
               {JOURNEY.map((step, i) => (
                 <li key={step.title} className="relative flex gap-5 md:flex-col md:items-center md:text-center">
                   <span
-                    className="grid size-14 shrink-0 place-items-center rounded-full bg-benta-blue font-poppins text-xl text-benta-bg shadow-[0_0_0_8px_var(--color-benta-bg)] motion-safe:animate-pop play-on-reveal"
+                    className="play-on-reveal grid size-14 shrink-0 place-items-center rounded-full bg-benta-blue text-xl font-bold text-white shadow-[0_0_0_6px_var(--color-benta-yellow-soft)] motion-safe:animate-pop"
                     style={{ animationDelay: `${300 + i * 250}ms` }}
                   >
                     {i + 1}
                   </span>
                   <div>
                     <h3 className={`${HEADING} text-2xl`}>{step.title}</h3>
-                    <p className="mt-2 text-[15px] text-benta-blue/75 md:mx-auto md:max-w-[220px]">{step.text}</p>
+                    <p className="mt-2 text-[15px] text-benta-navy/75 md:mx-auto md:max-w-[220px]">{step.text}</p>
                   </div>
                 </li>
               ))}
             </ol>
           </div>
         </section>
+        <ScallopEdge color="var(--color-benta-yellow-soft)" />
 
         {/* Chamada final */}
         <section aria-labelledby="final-title" className={`${WRAP} py-16 lg:py-24`}>
-          <div className="reveal flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between sm:rounded-3xl sm:bg-benta-soft sm:px-11 sm:py-12">
-            <div>
-              <h2 id="final-title" className={`${HEADING} text-[clamp(1.9rem,2.7vw,2.45rem)]`}>
+          <div className="reveal relative flex flex-col gap-8 overflow-hidden rounded-[2rem] bg-benta-pink px-7 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-12">
+            <TilePattern className="text-white/20" />
+            <div className="relative">
+              <h2 id="final-title" className={`${HEADING} text-[clamp(1.9rem,2.9vw,2.6rem)]`}>
                 O que vamos preparar juntos?
               </h2>
-              <p className="mt-4 hidden text-base sm:block">Abra o caderno. Escolha uma receita. Crie uma lembrança.</p>
+              <p className="mt-3 text-base">Abra o caderno. Escolha uma receita. Crie uma lembrança.</p>
             </div>
-            <a href="#receitas" className={`${BTN_BLUE} inline-flex w-full shrink-0 sm:w-[230px]`}>
-              Ver receitas <ArrowRight />
+            <a href="#receitas" className={`${BTN_BLUE} relative inline-flex w-full shrink-0 sm:w-[230px]`}>
+              Ver receitas <ArrowRight className={ARROW} />
             </a>
           </div>
         </section>
@@ -271,9 +367,9 @@ export default function DonaBentaPage() {
 
       <StudyFooter
         brand="a Dona Benta"
-        className="bg-benta-blue text-benta-bg"
-        mutedClassName="text-benta-bg/70"
-        logo={<span className="font-poppins text-3xl font-bold">Dona Benta</span>}
+        className="bg-benta-navy text-white"
+        mutedClassName="text-white/70"
+        logo={<span className="text-3xl font-bold tracking-tight">Dona Benta</span>}
       />
     </div>
   );
