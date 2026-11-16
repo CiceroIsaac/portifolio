@@ -39,35 +39,6 @@ export interface Project {
   note: string;
 }
 
-/** Texto padrão de aviso das landing pages. */
-const LANDING_NOTE =
-  "Estudo independente para portfólio, sem vínculo, contratação ou parceria com a marca. A capa identifica um espaço reservado; não representa uma página pronta.";
-
-/** Cria a entrada de uma landing page ainda não implementada. */
-function landingPlaceholder(id: string, brand: string, slot: string): Project {
-  return {
-    id,
-    name: `${brand} — landing page`,
-    brand,
-    label: "ESTUDO / EM DESENVOLVIMENTO",
-    filters: ["dev", "academic"],
-    description: "Espaço reservado para um estudo de landing page. Design e código em desenvolvimento.",
-    tags: ["Landing page", "Estudo independente", "Em breve"],
-    cover: "landing",
-    tone: id,
-    slot,
-    summary: `Este espaço está reservado para uma landing page conceitual inspirada na marca ${brand}. O design e a implementação serão desenvolvidos em uma próxima etapa.`,
-    points: [
-      "Direção visual e composição a desenvolver.",
-      "Implementação e versão responsiva a desenvolver.",
-      "Links de demonstração e código ainda não disponíveis.",
-    ],
-    repo: "",
-    site: "",
-    note: LANDING_NOTE,
-  };
-}
-
 /** Detalhes específicos de uma landing page já implementada. */
 interface LandingDetails {
   summary: string;
@@ -152,7 +123,15 @@ export const projects: Project[] = [
       "Cardápio, ingredientes e acompanhamentos sem preços ou ofertas inventadas.",
     ],
   }),
-  landingPlaceholder("doritos", "Doritos", "05"),
+  landingStudy("doritos", "Doritos", "05", {
+    summary:
+      "Landing page conceitual inspirada em Doritos: preto, vermelho, amarelo e roxo, tipografia inclinada, triângulos e composição gráfica, com fotos reais dos pacotes.",
+    points: [
+      "Wordmark do cabeçalho como interpretação tipográfica; pacotes com os recortes de referência do design.",
+      "Cards de sabores e momentos em blocos de cor, responsivos de 360 a 1440 px.",
+      "Triângulos em SVG com traço constante, independentes do tamanho da tela.",
+    ],
+  }),
   {
     id: "iexpress",
     name: "iExpress — interface study",
