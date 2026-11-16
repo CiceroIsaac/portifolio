@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { RevealObserver } from "@/components/landing/RevealObserver";
+import { RevealObserver } from "@/components/shared/RevealObserver";
 import { manrope } from "@/lib/fonts";
 import "./landing.css";
 

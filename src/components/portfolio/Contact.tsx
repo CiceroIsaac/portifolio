@@ -27,7 +27,7 @@ export function Contact() {
           </span>
           <span className="contact-code">&lt;let’s-build /&gt;</span>
         </div>
-        <div className="contact-main">
+        <div className="contact-main reveal">
           <h2 id="contact-title">
             Uma boa ideia
             <br />

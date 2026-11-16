@@ -6,6 +6,8 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/portfolio/style.css";
 import "@/styles/portfolio/theme-light.css";
 import "@/styles/portfolio/hero-typing.css";
+// Animações de entrada e detalhes em movimento (não afeta a hero).
+import "@/styles/portfolio/motion.css";
 
 export const metadata: Metadata = {
   title: "Isaac — Código & Design",

@@ -125,11 +125,11 @@ export function Projects() {
 
   return (
     <section className="projects section container" id="projetos" aria-labelledby="projects-title">
-      <div className="section-kicker">
+      <div className="section-kicker reveal">
         <span>01 / PROJETOS SELECIONADOS</span>
         <span>FEITO DE CURIOSIDADE + PRÁTICA</span>
       </div>
-      <div className="section-heading">
+      <div className="section-heading reveal">
         <h2 id="projects-title">
           Ideias que saíram
           <br />
@@ -142,7 +142,7 @@ export function Projects() {
         </p>
       </div>
 
-      <div className="filters" role="group" aria-label="Filtrar projetos">
+      <div className="filters reveal" role="group" aria-label="Filtrar projetos">
         {FILTERS.map((f) => (
           <button
             key={f.value}
@@ -164,7 +164,8 @@ export function Projects() {
         {visible.length} {visible.length === 1 ? "projeto exibido" : "projetos exibidos"}
       </p>
 
-      <div className="project-grid" id="project-grid">
+      {/* Cascata na grade: os cards recriados pelos filtros já nascem visíveis. */}
+      <div className="project-grid reveal-stagger" id="project-grid">
         {visible.map((p) => (
           <article key={p.id} className="project-card">
             <button className={coverClass(p)} data-project={p.id} aria-label={`Ver detalhes de ${p.name}`}>

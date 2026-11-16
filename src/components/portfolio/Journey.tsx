@@ -43,11 +43,11 @@ export function Journey() {
 
   return (
     <section className="journey section container" id="trajetoria" aria-labelledby="journey-title">
-      <div className="section-kicker">
+      <div className="section-kicker reveal">
         <span>03 / FORMAÇÃO & PRÁTICA</span>
         <span>CONHECIMENTO APLICADO EM PROJETOS</span>
       </div>
-      <div className="section-heading">
+      <div className="section-heading reveal">
         <h2 id="journey-title">
           Aprendizado que
           <br />
@@ -65,7 +65,7 @@ export function Journey() {
 
       <div
         ref={trackRef}
-        className="journey-track"
+        className="journey-track reveal-stagger"
         id="journey-track"
         tabIndex={0}
         role="region"

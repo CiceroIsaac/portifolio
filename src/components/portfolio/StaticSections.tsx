@@ -11,7 +11,7 @@ import portraitImage from "@/assets/portfolio/isaac-office.png";
 export function StackStrip() {
   return (
     <div className="stack-strip" aria-label="Tecnologias">
-      <div className="container stack-inner">
+      <div className="container stack-inner reveal-stagger">
         <span className="stack-label">
           MINHA CAIXA
           <br />
@@ -60,7 +60,7 @@ export function FigmaSection() {
   return (
     <section className="figma-section" id="figma" aria-labelledby="figma-title">
       <div className="container figma-layout">
-        <div className="figma-copy">
+        <div className="figma-copy reveal reveal-left">
           <span className="eyebrow">
             <span className="figma-symbol" aria-hidden="true">
               <i></i>
@@ -97,7 +97,7 @@ export function FigmaSection() {
           </button>
           <p className="figma-note">Conceito de interface · marca fictícia · sem vínculo comercial</p>
         </div>
-        <div className="figma-board">
+        <div className="figma-board reveal reveal-zoom">
           <div className="board-toolbar">
             <span>⌘ &nbsp; iExpress / Interface study</span>
             <span>Design &nbsp; ◉</span>
@@ -139,12 +139,12 @@ export function FigmaSection() {
 export function About() {
   return (
     <section className="about section container" id="sobre" aria-labelledby="about-title">
-      <div className="section-kicker">
+      <div className="section-kicker reveal">
         <span>02 / QUEM ESTÁ POR TRÁS</span>
         <span>&lt;ABOUT /&gt;</span>
       </div>
       <div className="about-grid">
-        <div className="portrait-card">
+        <div className="portrait-card reveal reveal-left">
           <Image src={portraitImage} alt="Retrato de Cícero Isaac em preto e branco, com fundo de escritório" />
           <div className="portrait-grid"></div>
           <div className="portrait-caption">
@@ -157,7 +157,7 @@ export function About() {
             <b>Cariri ↗</b>
           </div>
         </div>
-        <div className="about-copy">
+        <div className="about-copy reveal reveal-right">
           <h2 id="about-title">
             Prazer, Isaac<span className="lime">.</span>
             <br />
@@ -231,7 +231,7 @@ export function Toolbox() {
   const dev = ["TypeScript", "JavaScript", "NestJS", "React", "Next.js", "Node.js", "Java"];
   const design = ["Figma", "UI Design", "Prototipagem", "Git / GitHub"];
   return (
-    <section className="toolbox container" aria-labelledby="toolbox-title">
+    <section className="toolbox container reveal-stagger" aria-labelledby="toolbox-title">
       <div className="toolbox-intro">
         <span className="eyebrow">O QUE EU CONECTO</span>
         <h2 id="toolbox-title">

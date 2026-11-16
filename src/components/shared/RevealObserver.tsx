@@ -5,7 +5,8 @@ import { useEffect } from "react";
 /**
  * Animação de entrada ao rolar a página.
  *
- * Qualquer elemento com a classe `reveal` começa oculto (ver landing.css) e
+ * Qualquer elemento com a classe `reveal` (ou `reveal-stagger`) começa oculto
+ * (ver landing.css e styles/portfolio/motion.css) e
  * recebe `is-visible` quando entra na tela. Um único IntersectionObserver
  * atende a página inteira, então as seções continuam Server Components.
  *
@@ -13,7 +14,8 @@ import { useEffect } from "react";
  */
 export function RevealObserver() {
   useEffect(() => {
-    const elements = document.querySelectorAll<HTMLElement>(".reveal:not(.is-visible)");
+    // `.reveal-stagger`: o bloco revela os filhos em cascata (usado no portfólio).
+    const elements = document.querySelectorAll<HTMLElement>(".reveal:not(.is-visible), .reveal-stagger:not(.is-visible)");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

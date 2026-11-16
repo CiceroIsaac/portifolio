@@ -4,6 +4,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { Journey } from "@/components/portfolio/Journey";
 import { Projects } from "@/components/portfolio/Projects";
 import { About, FigmaSection, Footer, StackStrip, Toolbox } from "@/components/portfolio/StaticSections";
+import { RevealObserver } from "@/components/shared/RevealObserver";
 
 /** Página inicial: o portfólio completo, seção por seção. */
 export default function PortfolioPage() {
@@ -24,6 +25,8 @@ export default function PortfolioPage() {
         <Contact />
       </main>
       <Footer />
+      {/* Revela as seções (fora da hero) conforme a rolagem */}
+      <RevealObserver />
     </>
   );
 }
