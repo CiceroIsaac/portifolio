@@ -1,5 +1,7 @@
 import Image from "next/image";
-import iexpressImage from "@/assets/portfolio/iexpress.png";
+// WebP 2× (Lanczos + nitidez leve) gerado a partir da prévia original: mais
+// nítido no quadro inclinado e ~80% menor que o PNG.
+import iexpressImage from "@/assets/portfolio/iexpress.webp";
 import portraitImage from "@/assets/portfolio/isaac-office.png";
 
 /**
@@ -91,10 +93,6 @@ export function FigmaSection() {
               03 <b>Prototipagem</b>
             </span>
           </div>
-          {/* `data-project` é tratado pelo componente Projects (abre o diálogo). */}
-          <button className="button light" data-project="iexpress">
-            Explorar o estudo iExpress <span>↗</span>
-          </button>
           <p className="figma-note">Conceito de interface · marca fictícia · sem vínculo comercial</p>
         </div>
         <div className="figma-board reveal reveal-zoom">

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { projects, type Project, type ProjectFilter } from "@/data/projects";
-import iexpressImage from "@/assets/portfolio/iexpress.png";
+import iexpressImage from "@/assets/portfolio/iexpress.webp";
 import { closeOnBackdrop, openDialog } from "./Header";
 
 /** Botões de filtro, na mesma ordem da versão original. */
@@ -256,11 +256,6 @@ function ProjectDetail({ project: p, onNavigate }: { project: Project; onNavigat
             <li key={t}>{t}</li>
           ))}
         </ul>
-        {p.image && (
-          <a className="detail-image-link" href={iexpressImage.src} target="_blank" rel="noopener noreferrer">
-            Ver imagem completa ↗
-          </a>
-        )}
         <div className="detail-links">
           {p.repo && (
             <a className="button primary" href={p.repo} target="_blank" rel="noopener noreferrer">
