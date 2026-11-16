@@ -8,6 +8,9 @@ import "@/styles/portfolio/theme-light.css";
 import "@/styles/portfolio/hero-typing.css";
 // Animações de entrada e detalhes em movimento (não afeta a hero).
 import "@/styles/portfolio/motion.css";
+// Abertura (vinheta) exibida na primeira visita da sessão.
+import "@/styles/portfolio/intro.css";
+import { INTRO_SCRIPT } from "@/components/portfolio/Intro";
 
 export const metadata: Metadata = {
   title: "Isaac — Código & Design",
@@ -27,7 +30,13 @@ export const viewport: Viewport = { themeColor: "#fafbfe" };
  */
 export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    // suppressHydrationWarning: o script da abertura pode adicionar uma classe
+    // ao <html> antes do React assumir a página.
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        {/* Decide, antes da primeira pintura, se a abertura vai tocar. */}
+        <script dangerouslySetInnerHTML={{ __html: INTRO_SCRIPT }} />
+      </head>
       <body>{children}</body>
     </html>
   );

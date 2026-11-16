@@ -1,0 +1,206 @@
+/*
+ * Abertura do portfólio (inspirada em vinhetas de abertura de vídeo).
+ *
+ * Sequência (~2,6 s):
+ *   0,00 s  selo amarelo entra com "pulo"
+ *   0,35 s  chaves { } se afastam e o "i" aparece entre elas
+ *   0,85 s  "isaac" é revelado da esquerda para a direita
+ *   1,35 s  o ponto amarelo cai com quique
+ *   1,50 s  legenda "código & design"
+ *   0 → 2 s barra de progresso na base
+ *   2,05 s  a tela sobe e revela a hero
+ *
+ * Só aparece quando o script do <head> adiciona `intro-playing` ao <html>
+ * (primeira visita da sessão, sem movimento reduzido e sem âncora na URL).
+ * Sem JavaScript, nada disso é exibido.
+ */
+
+.intro,
+.intro-skip {
+  display: none;
+}
+
+.intro-playing body {
+  overflow: hidden;
+}
+
+/* Enquanto a abertura toca, a entrada da hero espera (fica no 1º quadro). */
+.intro-playing :is(.header, .hero-top, .hero-copy .code-comment, .hero-copy h1, .hero-description, .hero-actions, .hero-art, .hero-bottom) {
+  animation-play-state: paused;
+}
+
+.intro-playing .intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: var(--blue, #255be5);
+  color: #fff;
+  animation: intro-exit 0.6s cubic-bezier(0.7, 0, 0.2, 1) 2.05s both;
+}
+
+/* Saída rápida ao pular. */
+.intro-playing.intro-skipping .intro {
+  animation: intro-exit 0.45s cubic-bezier(0.7, 0, 0.2, 1) both;
+}
+
+.intro-logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.5vw, 26px);
+}
+
+/* Selo amarelo com { i } */
+.intro-badge {
+  display: grid;
+  place-items: center;
+  width: clamp(76px, 11vw, 124px);
+  aspect-ratio: 1;
+  border-radius: 28%;
+  background: var(--yellow, #ffcd32);
+  color: #16233c;
+  font: 500 clamp(30px, 4.6vw, 52px) / 1 var(--mono, monospace);
+  box-shadow: 0 18px 50px rgb(10 20 60 / 0.35);
+  animation: intro-badge 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.intro-badge span {
+  display: inline-block;
+}
+.intro-brace-l {
+  animation: intro-brace-l 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+.intro-brace-r {
+  animation: intro-brace-r 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+.intro-i {
+  animation: intro-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s both;
+}
+
+/* Wordmark "isaac." */
+.intro-word {
+  display: flex;
+  align-items: baseline;
+  font: 800 clamp(48px, 9vw, 104px) / 1 var(--sans, sans-serif);
+  letter-spacing: -0.06em;
+}
+.intro-name {
+  animation: intro-wipe 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.85s both;
+}
+.intro-dot {
+  color: var(--yellow, #ffcd32);
+  animation: intro-drop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.35s both;
+}
+
+.intro-caption {
+  position: absolute;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: 400 12px var(--mono, monospace);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.8);
+  animation: intro-fade-up 0.5s ease-out 1.5s both;
+}
+
+/* Barra de progresso na base */
+.intro-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--yellow, #ffcd32);
+  transform-origin: left;
+  animation: intro-bar 2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Botão "Pular" */
+.intro-playing .intro-skip {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1001;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgb(255 255 255 / 0.5);
+  border-radius: 999px;
+  color: #fff;
+  font: 400 12px var(--mono, monospace);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: intro-fade-up 0.4s ease-out 0.3s both, intro-exit-fade 0.3s ease-in 2.05s forwards;
+}
+.intro-playing .intro-skip:hover {
+  background: rgb(255 255 255 / 0.15);
+}
+.intro-playing .intro-skip:focus-visible {
+  outline: 2px solid var(--yellow, #ffcd32);
+  outline-offset: 3px;
+}
+.intro-playing.intro-skipping .intro-skip {
+  display: none;
+}
+
+@keyframes intro-badge {
+  from {
+    transform: scale(0) rotate(-20deg);
+  }
+}
+@keyframes intro-brace-l {
+  from {
+    transform: translateX(0.32em);
+  }
+}
+@keyframes intro-brace-r {
+  from {
+    transform: translateX(-0.32em);
+  }
+}
+@keyframes intro-pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes intro-wipe {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: translateX(-12px);
+  }
+  to {
+    clip-path: inset(0 -10% 0 0);
+  }
+}
+@keyframes intro-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-1.2em);
+  }
+}
+@keyframes intro-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@keyframes intro-bar {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes intro-exit {
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes intro-exit-fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

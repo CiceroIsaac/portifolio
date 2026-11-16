@@ -1,6 +1,7 @@
 import { Contact } from "@/components/portfolio/Contact";
 import { Header } from "@/components/portfolio/Header";
 import { Hero } from "@/components/portfolio/Hero";
+import { Intro } from "@/components/portfolio/Intro";
 import { Journey } from "@/components/portfolio/Journey";
 import { Projects } from "@/components/portfolio/Projects";
 import { About, FigmaSection, Footer, StackStrip, Toolbox } from "@/components/portfolio/StaticSections";
@@ -10,6 +11,8 @@ import { RevealObserver } from "@/components/shared/RevealObserver";
 export default function PortfolioPage() {
   return (
     <>
+      {/* Abertura: só aparece na primeira visita da sessão */}
+      <Intro />
       <a className="skip" href="#conteudo">
         Pular para o conteúdo
       </a>
