@@ -2,11 +2,11 @@
 
 ## Fonte de verdade e objetivo
 
-Este arquivo reúne as decisões mais recentes do usuário. O código atual está em `portfolio/`. Os cinco conceitos aprovados estão em `designs/`. Desenvolva as landing pages em HTML, CSS e JavaScript seguindo essas referências e a organização existente.
+Este arquivo reúne as decisões mais recentes do usuário. O site é um app **Next.js 16 + TypeScript + Tailwind CSS v4** com export estático, na raiz do repositório (`src/`). Os cinco conceitos aprovados estão em `designs/` e as cinco landing pages já estão implementadas em `src/app/(landing)/projetos/<marca>/`.
 
-O usuário aprovou os designs em SVG e pediu este pacote para continuar no Claude. O portfólio já funciona; as cinco páginas das marcas ainda não estão implementadas. Referências dentro dos cards que dizem que o design ainda será criado estão desatualizadas e poderão ser ajustadas ao integrar as páginas.
+A migração de HTML/CSS/JS para Next.js com Tailwind foi pedida explicitamente pelo usuário em 2026-11-15. A pasta `portfolio/` guarda a versão estática original apenas como referência (fora do build, do lint e do TypeScript).
 
-Não migrar automaticamente para Next.js, não adicionar framework nem substituir a infraestrutura. A menção à futura migração em documentação anterior não é autorização atual para fazê-la.
+Commits: Conventional Commits em português, sempre em nome do usuário; `Co-Authored-By` do Claude apenas nos commits principais (configuração, migração, cada landing page).
 
 ## Arquivos de entrada
 
@@ -36,19 +36,19 @@ Consulte `documentacao/design-tokens.json` para cores, fontes e enquadramentos. 
 
 ## Código atual
 
-- `portfolio/index.html`: conteúdo e estrutura.
-- `portfolio/style.css`: estrutura e responsividade.
-- `portfolio/theme-light.css`: identidade clara e ajustes visuais.
-- `portfolio/hero-typing.css`: hero aprovada.
-- `portfolio/app.js`: array `projects`, filtros, diálogos, navegação, menu mobile e animações.
-- `portfolio/assets/`: imagens e fontes locais.
+- `src/app/(portfolio)/`: layout raiz e página do portfólio. Usa o CSS original (`src/styles/portfolio/`), **sem Tailwind**, para não alterar a aparência aprovada; `hero-typing.css` é idêntico ao original. Ordem: `style.css`, `theme-light.css`, `hero-typing.css`.
+- `src/components/portfolio/`: seções do portfólio em React (Hero, Header com menu mobile e ⌘K, Projects com filtros e diálogo, Journey, Contact...).
+- `src/data/projects.ts`: array `projects` tipado (IDs, filtros, `showInAll`, `site`, `repo`).
+- `src/app/(landing)/`: layout raiz das landing pages com Tailwind (`landing.css` tem os tokens das marcas) e uma rota por marca.
+- `src/components/landing/`: peças compartilhadas (MobileMenu, StudyFooter, StudyCta) e componentes por marca (ex.: `ProductCrop`, `PackCrop`).
+- `src/lib/fonts.ts`: fontes locais via `next/font`; arquivos e licenças em `src/fonts/`.
 
-A ordem atual dos estilos é `style.css`, `theme-light.css`, `hero-typing.css`.
+Os dois grupos de rotas têm layouts raiz separados: a navegação entre portfólio e landing pages recarrega a página e os estilos não vazam.
 
 ## Implementação das marcas
 
-1. Comece por Itaú e reproduza as versões desktop e mobile. Em seguida Nescau, Dona Benta, Burger King e Doritos.
-2. Sugestão compatível com a base: `portfolio/landing-pages/<marca>/index.html`, `styles.css`, `script.js` e `assets/`. Copie os assets necessários para dentro de cada página; a pasta `portfolio/` deve continuar autossuficiente para publicação.
+1. Todas as cinco páginas estão implementadas (Itaú, Nescau, Dona Benta, Burger King, Doritos) e vinculadas aos cards com `site: "projetos/<id>/"`.
+2. Cada página fica em `src/app/(landing)/projetos/<marca>/page.tsx`, com assets em `src/assets/landing/<marca>/` importados estaticamente (funciona em qualquer caminho de publicação).
 3. Implemente conteúdo semântico real, não uma imagem/SVG da página inteira usada como site. Use as referências para hierarquia, ritmo, tipografia, cores, proporções, fotos e detalhes.
 4. Preserve proporções de fotos e produtos. Nos SVGs alguns assets têm margens transparentes ou brancas e são enquadrados por viewBox; consulte as notas em `design-tokens.json`. Não deformar produtos para caber.
 5. Resolva o comportamento entre 390 e 1440 px com CSS responsivo. Não fazer uma página desktop inteira reduzida por `transform: scale`. Verifique também 360, 768 e 1024 px.
@@ -70,7 +70,7 @@ A ordem atual dos estilos é `style.css`, `theme-light.css`, `hero-typing.css`.
 ## Validação e entrega
 
 - Verifique desktop e mobile por renderização/screenshot, com atenção a cortes, sobreposição, margens, scroll horizontal e tamanho dos controles.
-- Confirme que todas as imagens/fontes locais carregam e que a pasta `portfolio/` funciona sozinha.
+- Confirme que todas as imagens/fontes locais carregam e que `npm run build` gera `out/` funcionando sozinho em um servidor estático.
 - Teste os controles das novas páginas e faça uma revisão rápida dos filtros, modal, navegação e hero do portfólio para detectar regressões.
-- Não publicar automaticamente. Entregue os arquivos completos e comandos simples para executar localmente.
+- Não publicar o site automaticamente. Comandos: `npm install`, `npm run dev`, `npm run lint`, `npm run build`.
 - Informe o que foi implementado e qualquer CTA ainda dependente de um destino real.

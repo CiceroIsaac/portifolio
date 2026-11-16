@@ -1,5 +1,7 @@
 # Isaac — portfólio + designs para o Claude
 
+> **Atualização (2026-11-15):** o portfólio foi migrado para Next.js + Tailwind e as cinco landing pages foram implementadas. Veja o `README.md` para executar o projeto. O conteúdo abaixo descreve o pacote original e a pasta `portfolio/`, mantida como referência.
+
 Pacote de continuidade com o código atual do portfólio e os cinco designs aprovados em desktop e mobile.
 
 ## Conteúdo
