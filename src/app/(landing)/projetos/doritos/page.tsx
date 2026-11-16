@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { StaticImageData } from "next/image";
+import { IntensityMeter } from "@/components/landing/doritos/IntensityMeter";
 import { PackCrop, type CropRect } from "@/components/landing/doritos/PackCrop";
+import { Marquee } from "@/components/landing/Marquee";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyFooter } from "@/components/landing/StudyFooter";
 import { ArrowRight, WRAP } from "@/components/landing/ui";
@@ -108,23 +110,24 @@ export default function DoritosPage() {
         {/* Hero */}
         <section id="inicio" aria-labelledby="doritos-title" className={`${WRAP} grid items-center gap-10 pt-8 pb-16 lg:grid-cols-2 lg:pt-6 lg:pb-20`}>
           <div>
-            <p className={EYEBROW}>Intensidade não segue roteiro.</p>
-            <h1 id="doritos-title" className={`${HEADING} mt-5 text-[clamp(2.6rem,7.5vw,6.75rem)]`}>
+            <p className={`${EYEBROW} motion-safe:animate-hero-in`}>Intensidade não segue roteiro.</p>
+            <h1 id="doritos-title" className={`${HEADING} anim-delay-1 mt-5 text-[clamp(2.6rem,7.5vw,6.75rem)] motion-safe:animate-hero-in`}>
               O óbvio <br />
               não tem <br className="hidden lg:block" />
               vez.
             </h1>
-            <p className="mt-6 max-w-[540px] text-lg leading-relaxed text-doritos-cream/80 lg:mt-10 lg:text-[21px]">
+            <p className="anim-delay-2 mt-6 max-w-[540px] text-lg leading-relaxed text-doritos-cream/80 motion-safe:animate-hero-in lg:mt-10 lg:text-[21px]">
               Quebre a rotina. Aumente o sabor. Transforme qualquer momento no seu próximo rolê.
             </p>
-            <a href="#sabores" className={`${BTN} mt-8 inline-flex w-full sm:w-auto lg:mt-12`}>
+            <a href="#sabores" className={`${BTN} anim-delay-3 mt-8 inline-flex w-full motion-safe:animate-hero-in sm:w-auto lg:mt-12`}>
               Descubra os sabores <ArrowRight />
             </a>
           </div>
-          <figure className="relative mx-auto w-full max-w-[560px] py-[6%]">
-            <Triangle strokeWidth={10} className="absolute top-[2%] left-[4%] h-[100%] w-[96%] text-doritos-red" />
-            <Triangle className="absolute top-[12%] left-[-4%] h-[74%] w-[92%] rotate-[160deg] text-doritos-red/50" />
-            <div className="relative mx-auto w-[60%] rotate-[8deg] bg-white p-[4%] shadow-[0_30px_60px_rgba(0,0,0,.45)]">
+          <figure className="anim-delay-2 relative mx-auto w-full max-w-[560px] py-[6%] motion-safe:animate-pop">
+            {/* Triângulos girando devagar, em sentidos opostos */}
+            <Triangle strokeWidth={10} className="absolute top-[2%] left-[4%] h-[100%] w-[96%] text-doritos-red motion-safe:animate-spin-slow" />
+            <Triangle className="absolute top-[12%] left-[-4%] h-[74%] w-[92%] rotate-[160deg] text-doritos-red/50 [animation-direction:reverse] motion-safe:animate-spin-slow" />
+            <div className="relative mx-auto w-[60%] rotate-[8deg] bg-white p-[4%] shadow-[0_30px_60px_rgba(0,0,0,.45)] motion-safe:animate-wobble">
               <PackCrop src={nacho} alt="Pacote de Doritos Queijo Nacho" crop={NACHO_CROP} priority sizes="300px" />
             </div>
             <figcaption className="relative mx-auto -mt-3 w-fit -rotate-2 rounded-full bg-doritos-red px-8 py-1.5 text-[11px] font-bold tracking-[0.08em] uppercase">
@@ -134,26 +137,28 @@ export default function DoritosPage() {
         </section>
 
         {/* Faixa amarela */}
-        <div className="bg-doritos-yellow px-6 py-5 text-center text-doritos-black">
-          <p className="font-condensed text-[clamp(1.3rem,2.15vw,1.95rem)] font-bold uppercase">
-            Aumente o sabor<span className="hidden md:inline"> / Quebre a rotina / Vai de Doritos</span>
-            <span className="md:hidden">.</span>
-          </p>
-        </div>
+        <Marquee
+          items={["Aumente o sabor", "Quebre a rotina", "Vai de Doritos", "O óbvio não tem vez"]}
+          separator={<span className="text-doritos-red">▲</span>}
+          className="bg-doritos-yellow py-5 text-doritos-black"
+          itemClassName="font-condensed text-[clamp(1.3rem,2.15vw,1.95rem)] font-bold uppercase italic"
+        />
 
         {/* Sabores */}
         <section id="sabores" aria-labelledby="sabores-title" className={`${WRAP} pt-16 lg:pt-24`}>
-          <p className={EYEBROW}>Escolha seu lado intenso</p>
-          <h2 id="sabores-title" className={`${HEADING} mt-5 text-[clamp(2rem,4.3vw,3.9rem)]`}>
+          <p className={`${EYEBROW} reveal`}>Escolha seu lado intenso</p>
+          <h2 id="sabores-title" className={`${HEADING} reveal mt-5 text-[clamp(2rem,4.3vw,3.9rem)]`}>
             Qual é a sua vibe?
           </h2>
           <ul className="mt-10 grid gap-6 lg:grid-cols-2">
-            {FLAVORS.map((f) => (
-              <li key={f.name} className={`relative flex flex-col overflow-hidden p-6 sm:p-8 ${f.bg}`}>
-                <Triangle className="absolute top-[8%] right-[7%] hidden h-[64%] w-[38%] text-white/80 sm:block" />
+            {FLAVORS.map((f, i) => (
+              <li key={f.name} className={`reveal ${i === 0 ? "reveal-left" : "reveal-right"} flex`}>
+                {/* Hover: o pacote inclina e o triângulo gira */}
+                <div className={`group relative flex w-full flex-col overflow-hidden p-6 sm:p-8 ${f.bg}`}>
+                <Triangle className="absolute top-[8%] right-[7%] hidden h-[64%] w-[38%] text-white/80 transition-transform duration-700 group-hover:rotate-[24deg] sm:block" />
                 <span className="font-condensed text-xl font-bold">{f.n}</span>
                 <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:items-center">
-                  <div className="mx-auto w-[56%] max-w-[220px] bg-white p-[3%] sm:mx-0 sm:w-[37%]">
+                  <div className="mx-auto w-[56%] max-w-[220px] bg-white p-[3%] shadow-[0_16px_30px_rgba(0,0,0,.25)] transition-transform duration-500 group-hover:-translate-y-2 group-hover:-rotate-6 sm:mx-0 sm:w-[37%]">
                     <PackCrop src={f.image} alt={`Pacote de Doritos ${f.name}`} crop={f.crop} sizes="220px" />
                   </div>
                   <div className="relative">
@@ -165,6 +170,7 @@ export default function DoritosPage() {
                   <ArrowRight className="size-7" />
                   <span className="sr-only">Momentos para {f.name}</span>
                 </a>
+                </div>
               </li>
             ))}
           </ul>
@@ -172,31 +178,47 @@ export default function DoritosPage() {
 
         {/* Momentos */}
         <section id="momentos" aria-labelledby="momentos-title" className={`${WRAP} py-16 lg:py-24`}>
-          <p className={EYEBROW}>Seu momento pede mais</p>
-          <h2 id="momentos-title" className={`${HEADING} mt-5 text-[clamp(1.75rem,4vw,3.55rem)]`}>
+          <p className={`${EYEBROW} reveal`}>Seu momento pede mais</p>
+          <h2 id="momentos-title" className={`${HEADING} reveal mt-5 text-[clamp(1.75rem,4vw,3.55rem)]`}>
             Não é só uma pausa. <br />É a sua pausa.
           </h2>
           <ul className="mt-10 grid gap-6 md:grid-cols-3">
-            {MOMENTS.map((m) => (
-              <li key={m.title} className={`flex flex-col gap-6 p-7 ${m.bg} ${m.light ? "text-doritos-cream" : "text-doritos-black"}`}>
-                <div className="flex justify-center">{m.icon}</div>
-                <div>
-                  <h3 className={`${HEADING} text-[clamp(1.6rem,2.6vw,2.4rem)]`}>{m.title}</h3>
-                  <p className="mt-3 text-base">{m.text}</p>
+            {MOMENTS.map((m, i) => (
+              // `reveal` no <li>; o hover (inclinar) fica no card interno.
+              <li key={m.title} className="reveal flex" style={{ "--reveal-delay": `${i * 130}ms` } as React.CSSProperties}>
+                <div className={`group flex w-full flex-col gap-6 p-7 transition-transform duration-300 hover:-rotate-2 hover:scale-[1.03] ${m.bg} ${m.light ? "text-doritos-cream" : "text-doritos-black"}`}>
+                  <div className="flex justify-center transition-transform duration-300 group-hover:scale-110">{m.icon}</div>
+                  <div>
+                    <h3 className={`${HEADING} text-[clamp(1.6rem,2.6vw,2.4rem)]`}>{m.title}</h3>
+                    <p className="mt-3 text-base">{m.text}</p>
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
         </section>
 
+        {/* Nova seção: medidor de intensidade (interativo) */}
+        <section id="intensidade" aria-labelledby="intensidade-title" className={`${WRAP} pb-16 lg:pb-24`}>
+          <div className="reveal">
+            <p className={EYEBROW}>Termômetro do rolê</p>
+            <h2 id="intensidade-title" className={`${HEADING} mt-5 mb-10 text-[clamp(1.75rem,4vw,3.55rem)]`}>
+              Qual é a sua intensidade hoje?
+            </h2>
+          </div>
+          <div className="reveal reveal-zoom" style={{ "--reveal-delay": `${150}ms` } as React.CSSProperties}>
+            <IntensityMeter />
+          </div>
+        </section>
+
         {/* A marca / chamada final */}
         <section id="marca" aria-labelledby="marca-title" className={WRAP}>
           <div className="grid items-center gap-10 border-t border-white/15 py-16 lg:grid-cols-2 lg:py-20">
             <div aria-hidden="true" className="relative mx-auto hidden aspect-square w-full max-w-[420px] lg:block">
-              <Triangle strokeWidth={8} className="absolute inset-[6%] text-doritos-red" />
-              <Triangle strokeWidth={3} className="absolute inset-[10%] rotate-[110deg] text-doritos-yellow" />
+              <Triangle strokeWidth={8} className="absolute inset-[6%] text-doritos-red motion-safe:animate-spin-slow" />
+              <Triangle strokeWidth={3} className="absolute inset-[10%] rotate-[110deg] text-doritos-yellow [animation-direction:reverse] motion-safe:animate-spin-slow" />
             </div>
-            <div>
+            <div className="reveal reveal-right">
               <p className={EYEBROW}>Sem espaço para o tanto faz.</p>
               <h2 id="marca-title" className={`${HEADING} mt-5 text-[clamp(1.9rem,3.7vw,3.3rem)]`}>
                 Aperte o play <br />
