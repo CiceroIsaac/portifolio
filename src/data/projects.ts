@@ -68,6 +68,35 @@ function landingPlaceholder(id: string, brand: string, slot: string): Project {
   };
 }
 
+/** Detalhes específicos de uma landing page já implementada. */
+interface LandingDetails {
+  summary: string;
+  points: string[];
+}
+
+/**
+ * Cria a entrada de uma landing page implementada. `site` é um caminho
+ * relativo real (a página fica em src/app/(landing)/projetos/<id>/).
+ */
+function landingStudy(id: string, brand: string, slot: string, details: LandingDetails): Project {
+  return {
+    id,
+    name: `${brand} — landing page`,
+    brand,
+    label: "ESTUDO / LANDING PAGE",
+    filters: ["dev", "academic"],
+    description: "Estudo independente de landing page responsiva, implementado em Next.js e Tailwind CSS a partir de um conceito visual próprio.",
+    tags: ["Next.js", "Tailwind CSS", "Landing page", "Estudo independente"],
+    cover: "landing",
+    tone: id,
+    slot,
+    ...details,
+    repo: "",
+    site: `projetos/${id}/`,
+    note: "Estudo independente para portfólio, sem vínculo, contratação ou parceria com a marca. Página conceitual: não apresenta ofertas, preços, dados ou serviços reais.",
+  };
+}
+
 export const projects: Project[] = [
   {
     id: "donuts",
@@ -87,7 +116,15 @@ export const projects: Project[] = [
     repo: "https://github.com/CiceroIsaac/Donuts_Game",
     note: "Descrição baseada no README público do projeto. A capa é uma composição ilustrativa; a interface do jogo é no terminal.",
   },
-  landingPlaceholder("itau", "Itaú", "01"),
+  landingStudy("itau", "Itaú", "01", {
+    summary:
+      "Landing page conceitual inspirada no Itaú: laranja, azul profundo e fundo quente claro, com uma interface de app e um cartão ilustrativos construídos em HTML e CSS.",
+    points: [
+      "Hero com ilustração de app e cartão em unidades de container, proporcional de 360 a 1440 px.",
+      "Navegação por âncoras com menu mobile acessível (teclado, Escape e foco visível).",
+      "Seções de soluções, estilo de vida e app; CTA final sem destino comercial inventado.",
+    ],
+  }),
   landingPlaceholder("nescau", "Nescau", "02"),
   landingPlaceholder("dona-benta", "Farinha Dona Benta", "03"),
   landingPlaceholder("burger-king", "Burger King", "04"),
