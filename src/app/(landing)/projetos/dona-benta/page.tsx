@@ -52,7 +52,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 
 export default function DonaBentaPage() {
   return (
-    <div className={`${bookman.variable} bg-benta-bg text-benta-blue`}>
+    <div className={`${bookman.variable} overflow-x-clip bg-benta-bg text-benta-blue`}>
       {/* Cabeçalho */}
       <header className="sticky top-0 z-40 bg-benta-bg/95 backdrop-blur">
         <div className={`${WRAP} relative flex h-20 items-center justify-between lg:h-[118px]`}>

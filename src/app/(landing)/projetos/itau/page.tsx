@@ -66,7 +66,7 @@ const BTN_INK = `${BTN} bg-itau-ink text-white hover:bg-[#0f2236] focus-visible:
 
 export default function ItauPage() {
   return (
-    <div className="bg-itau-bg text-itau-ink">
+    <div className="overflow-x-clip bg-itau-bg text-itau-ink">
       {/* Cabeçalho fixo */}
       <header className="sticky top-0 z-40 border-b border-itau-ink/10 bg-itau-bg/95 backdrop-blur">
         <div className={`${WRAP} relative flex h-20 items-center justify-between lg:h-[115px]`}>
