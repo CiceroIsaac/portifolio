@@ -11,11 +11,15 @@ const SEEN_KEY = "isaac-intro-vista";
  * - já foi vista nesta sessão;
  * - o visitante prefere movimento reduzido;
  * - a URL aponta para uma seção (#projetos, #contato...).
+ * Exceção: `?intro` na URL força a abertura (útil para revê-la ou mostrá-la),
+ * mas a preferência por movimento reduzido continua sendo respeitada.
  * Há um limite de segurança: a classe sai sozinha após 4 s.
  */
 export const INTRO_SCRIPT = `(function(){try{
 var d=document.documentElement;
-if(sessionStorage.getItem("${SEEN_KEY}")||location.hash||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var force=/[?&]intro(=|&|$)/.test(location.search);
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+if(!force&&(sessionStorage.getItem("${SEEN_KEY}")||location.hash))return;
 d.classList.add("intro-playing");
 setTimeout(function(){d.classList.remove("intro-playing","intro-skipping")},4000);
 }catch(e){}})();`;
