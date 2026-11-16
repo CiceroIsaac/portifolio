@@ -24,7 +24,7 @@ function filterProjects(filter: ProjectFilter): Project[] {
 function coverLabel(p: Project) {
   if (p.id === "iexpress") return "ESTUDO VISUAL";
   if (p.id === "private" || (p.cover === "landing" && !p.site)) return "EM CONSTRUÇÃO";
-  if (p.cover === "landing") return "LANDING PAGE";
+  if (p.cover === "landing") return "ESTUDO PUBLICADO";
   return "CAPA EDITORIAL";
 }
 
