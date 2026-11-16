@@ -207,3 +207,25 @@
 .anim-delay-4 {
   animation-delay: 480ms;
 }
+
+/* Linha que se "desenha" quando o bloco .reveal pai entra na tela.
+   Direção: horizontal por padrão; `.line-grow-y` para vertical. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .reveal .line-grow {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+  }
+  .reveal .line-grow-y {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .reveal.is-visible .line-grow {
+    transform: none;
+  }
+}
+
+/* Animações que só começam quando o bloco .reveal pai aparece. */
+.reveal:not(.is-visible) .play-on-reveal {
+  animation-play-state: paused;
+}
