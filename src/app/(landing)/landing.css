@@ -13,6 +13,7 @@
   --font-sans: var(--ff-manrope), system-ui, sans-serif;
   --font-condensed: var(--ff-condensed), "Arial Narrow", sans-serif;
   --font-bookman: var(--ff-bookman), Georgia, serif;
+  --font-poppins: var(--ff-poppins), system-ui, sans-serif;
 }
 
 @theme {

@@ -1,3 +1,4 @@
+import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 /**
@@ -27,10 +28,21 @@ export const dejavuCondensed = localFont({
   display: "swap",
 });
 
-/** URW Bookman: Light para Dona Benta, Demi (pesada) para Burger King. */
+/**
+ * Poppins: todo o texto da página da Dona Benta (pedido do usuário).
+ * O next/font/google baixa a fonte no build e a serve junto do site,
+ * sem requisições ao Google no navegador do visitante.
+ */
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--ff-poppins",
+  display: "swap",
+});
+
+/** URW Bookman Demi (pesada): títulos do Burger King. */
 export const bookman = localFont({
   src: [
-    { path: "../fonts/URWBookman-Light.otf", weight: "300" },
     { path: "../fonts/URWBookman-Demi.otf", weight: "700" },
   ],
   variable: "--ff-bookman",

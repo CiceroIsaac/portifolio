@@ -3,7 +3,7 @@ import Image, { type StaticImageData } from "next/image";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyFooter } from "@/components/landing/StudyFooter";
 import { ArrowRight, WRAP } from "@/components/landing/ui";
-import { bookman } from "@/lib/fonts";
+import { poppins } from "@/lib/fonts";
 import brownie from "@/assets/landing/dona-benta/dona-brownie.jpg";
 import cake from "@/assets/landing/dona-benta/dona-cake.jpg";
 import flour from "@/assets/landing/dona-benta/dona-flour.jpg";
@@ -42,8 +42,8 @@ const JOURNEY = [
 
 const USES = ["Para o bolo do fim de tarde", "Para uma massa feita em casa", "Para descobrir sua próxima receita"];
 
-/** Títulos: URW Bookman Light (serifa editorial). */
-const HEADING = "font-bookman font-light leading-[1.15] tracking-[-0.01em]";
+/** Títulos: Poppins Medium, com espaçamento levemente fechado. */
+const HEADING = "font-poppins font-medium leading-[1.15] tracking-[-0.025em]";
 const EYEBROW = "text-xs font-bold tracking-[0.14em] uppercase";
 const BTN = "items-center justify-between gap-6 rounded-full px-6 py-3.5 text-[15px] font-bold transition-colors duration-200";
 const BTN_BLUE = `${BTN} bg-benta-blue text-white hover:bg-[#162a46] focus-visible:outline-benta-blue`;
@@ -60,7 +60,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 
 export default function DonaBentaPage() {
   return (
-    <div className={`${bookman.variable} overflow-x-clip bg-benta-bg text-benta-blue`}>
+    <div className={`${poppins.variable} overflow-x-clip bg-benta-bg font-poppins text-benta-blue`}>
       {/* Cabeçalho */}
       <header className="sticky top-0 z-40 bg-benta-bg/95 backdrop-blur">
         <div className={`${WRAP} relative flex h-20 items-center justify-between lg:h-[118px]`}>
@@ -117,7 +117,7 @@ export default function DonaBentaPage() {
               />
               <figure className="absolute bottom-0 left-0 flex items-center gap-3 rounded-2xl bg-white p-4 motion-safe:animate-float shadow-[0_10px_30px_rgba(32,59,96,.12)] sm:left-[-4%] sm:p-5">
                 <Image src={flour} alt="Pacote de Farinha de Trigo Dona Benta" sizes="80px" className="h-auto w-14 sm:w-20" />
-                <figcaption className="font-bookman text-sm leading-snug sm:text-base">
+                <figcaption className="font-poppins text-sm leading-snug sm:text-base">
                   Um clássico <br />
                   da sua cozinha.
                   <span aria-hidden="true" className="mt-3 block h-0.5 w-16 bg-benta-terracotta" />
@@ -238,7 +238,7 @@ export default function DonaBentaPage() {
               {JOURNEY.map((step, i) => (
                 <li key={step.title} className="relative flex gap-5 md:flex-col md:items-center md:text-center">
                   <span
-                    className="grid size-14 shrink-0 place-items-center rounded-full bg-benta-blue font-bookman text-xl text-benta-bg shadow-[0_0_0_8px_var(--color-benta-bg)] motion-safe:animate-pop play-on-reveal"
+                    className="grid size-14 shrink-0 place-items-center rounded-full bg-benta-blue font-poppins text-xl text-benta-bg shadow-[0_0_0_8px_var(--color-benta-bg)] motion-safe:animate-pop play-on-reveal"
                     style={{ animationDelay: `${300 + i * 250}ms` }}
                   >
                     {i + 1}
@@ -273,7 +273,7 @@ export default function DonaBentaPage() {
         brand="a Dona Benta"
         className="bg-benta-blue text-benta-bg"
         mutedClassName="text-benta-bg/70"
-        logo={<span className="font-bookman text-3xl font-bold">Dona Benta</span>}
+        logo={<span className="font-poppins text-3xl font-bold">Dona Benta</span>}
       />
     </div>
   );
