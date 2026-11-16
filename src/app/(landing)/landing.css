@@ -1,0 +1,70 @@
+/*
+ * Estilos das landing pages: Tailwind CSS v4.
+ * `source(...)` limita a varredura de classes à pasta src/ (evita ler os
+ * SVGs de referência e a documentação na raiz do repositório).
+ */
+@import "tailwindcss" source("../..");
+
+/* Tokens de cada marca (documentacao/design-tokens.json). Viram classes
+   como `bg-itau-orange`, `text-nescau-red`, `font-condensed`... */
+/* `inline`: as classes usam a variável do next/font direto no elemento,
+   pois cada página aplica a sua fonte de títulos no próprio wrapper. */
+@theme inline {
+  --font-sans: var(--ff-manrope), system-ui, sans-serif;
+  --font-condensed: var(--ff-condensed), "Arial Narrow", sans-serif;
+  --font-bookman: var(--ff-bookman), Georgia, serif;
+}
+
+@theme {
+  --color-itau-orange: #ec7000;
+  --color-itau-ink: #17324d;
+  --color-itau-bg: #fff9f2;
+  --color-itau-soft: #f2e9dd;
+  --color-itau-peach: #f7d4af;
+
+  --color-nescau-red: #cd172b;
+  --color-nescau-yellow: #ffda24;
+  --color-nescau-bg: #fff8ea;
+  --color-nescau-ink: #35201f;
+
+  --color-benta-blue: #203b60;
+  --color-benta-terracotta: #af4739;
+  --color-benta-bg: #fbf5e9;
+  --color-benta-soft: #e8dfcb;
+
+  --color-bk-red: #d62300;
+  --color-bk-brown: #502314;
+  --color-bk-bg: #f5ebdc;
+  --color-bk-orange: #ff8732;
+
+  --color-doritos-black: #111113;
+  --color-doritos-cream: #faf6ec;
+  --color-doritos-red: #ec321e;
+  --color-doritos-yellow: #ffdf40;
+  --color-doritos-purple: #a38bff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px; /* espaço do cabeçalho fixo */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Foco visível padrão em todos os elementos interativos. */
+  :focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+}
