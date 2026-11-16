@@ -1,7 +1,7 @@
 import Image from "next/image";
-// WebP 2× (Lanczos + nitidez leve) gerado a partir da prévia original: mais
-// nítido no quadro inclinado e ~80% menor que o PNG.
-import iexpressImage from "@/assets/portfolio/iexpress.webp";
+// WebP 2× (Lanczos + nitidez leve) gerado a partir do print do Figma enviado
+// pelo usuário: mais nítido no quadro inclinado.
+import figmaPreview from "@/assets/portfolio/optiz.webp";
 import portraitImage from "@/assets/portfolio/isaac-office.png";
 
 /**
@@ -23,7 +23,7 @@ export function StackStrip() {
           <b className="ts-square">TS</b> TypeScript
         </span>
         <span>
-          <b className="ts-square js-square">JS</b> JavaScript
+          <b className="ts-square">JS</b> JavaScript
         </span>
         <span>
           <b className="nest-symbol" aria-hidden="true">
@@ -57,7 +57,7 @@ export function StackStrip() {
   );
 }
 
-/** Seção UI & Figma: apenas o estudo iExpress, com a prévia local. */
+/** Seção UI & Figma: apenas o estudo Optiz, com a prévia local. */
 export function FigmaSection() {
   return (
     <section className="figma-section" id="figma" aria-labelledby="figma-title">
@@ -93,19 +93,19 @@ export function FigmaSection() {
               03 <b>Prototipagem</b>
             </span>
           </div>
-          <p className="figma-note">Conceito de interface · marca fictícia · sem vínculo comercial</p>
+          <p className="figma-note">Prévia de interface · Figma</p>
         </div>
         <div className="figma-board reveal reveal-zoom">
           <div className="board-toolbar">
-            <span>⌘ &nbsp; iExpress / Interface study</span>
+            <span>⌘ &nbsp; Optiz / Interface study</span>
             <span>Design &nbsp; ◉</span>
           </div>
           <div className="board-canvas">
             <div className="design-selection">
-              <div className="selection-name">Home / Desktop</div>
+              <div className="selection-name">Seções / Desktop</div>
               <Image
-                src={iexpressImage}
-                alt="Estudo visual iExpress no Figma: início da landing page de uma marca fictícia de iPhones"
+                src={figmaPreview}
+                alt="Seções da landing page Optiz no Figma: hero de óculos infantis e carrossel de depoimentos de clientes"
               />
               <span className="handle tl"></span>
               <span className="handle tr"></span>

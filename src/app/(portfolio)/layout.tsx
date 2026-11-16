@@ -10,6 +10,8 @@ import "@/styles/portfolio/hero-typing.css";
 import "@/styles/portfolio/motion.css";
 // Abertura (vinheta) exibida na primeira visita da sessão.
 import "@/styles/portfolio/intro.css";
+// Ajustes de conteúdo (ex.: cor da capa do estudo Optiz).
+import "@/styles/portfolio/content.css";
 import { INTRO_SCRIPT } from "@/components/portfolio/Intro";
 
 export const metadata: Metadata = {

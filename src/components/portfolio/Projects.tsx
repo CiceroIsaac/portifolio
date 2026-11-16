@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { projects, type Project, type ProjectFilter } from "@/data/projects";
-import iexpressImage from "@/assets/portfolio/iexpress.webp";
+// Prévia do Figma (estudo Optiz), WebP 2× gerado a partir do print original.
+import figmaPreview from "@/assets/portfolio/optiz.webp";
 import { closeOnBackdrop, openDialog } from "./Header";
 
 /** Botões de filtro, na mesma ordem da versão original. */
@@ -22,7 +23,7 @@ function filterProjects(filter: ProjectFilter): Project[] {
 
 /** Rótulo do canto superior da capa. */
 function coverLabel(p: Project) {
-  if (p.id === "iexpress") return "ESTUDO VISUAL";
+  if (p.cover === "iexpress") return "ESTUDO VISUAL";
   if (p.id === "private" || (p.cover === "landing" && !p.site)) return "EM CONSTRUÇÃO";
   if (p.cover === "landing") return "ESTUDO PUBLICADO";
   return "CAPA EDITORIAL";
@@ -49,7 +50,7 @@ function CoverContent({ project: p }: { project: Project }) {
       );
       break;
     case "iexpress":
-      content = <Image src={iexpressImage} alt="Estudo da página inicial iExpress no Figma" />;
+      content = <Image src={figmaPreview} alt="Seções da landing page Optiz no Figma" />;
       break;
     case "donuts":
       content = (
@@ -234,7 +235,7 @@ function ProjectDetail({ project: p, onNavigate }: { project: Project; onNavigat
     <>
       <div className="detail-cover">
         {p.image ? (
-          <Image src={iexpressImage} alt={`Conceito de interface ${p.name}`} />
+          <Image src={figmaPreview} alt={`Prévia de interface: ${p.name}`} />
         ) : (
           <div className={coverClass(p)}>
             <CoverContent project={p} />

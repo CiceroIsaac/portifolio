@@ -1,0 +1,15 @@
+/*
+ * Ajustes de conteúdo posteriores ao CSS original do portfólio.
+ * O estudo Optiz usa o estilo de capa com prévia do Figma (.cover-iexpress),
+ * trocando o fundo lilás por um verde claro que combina com a imagem.
+ */
+.cover-iexpress.tone-optiz {
+  background: #d6e7e0;
+  color: #123d34;
+}
+
+/* A imagem herda o atributo height do next/image (altura real do arquivo);
+   com height:auto ela mantém a proporção e mostra o topo da prévia. */
+.cover-iexpress img {
+  height: auto;
+}

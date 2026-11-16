@@ -11,7 +11,11 @@
 /** Filtros disponíveis nos botões da seção de projetos. */
 export type ProjectFilter = "all" | "dev" | "academic" | "figma" | "professional";
 
-/** Tipos de capa desenhados no CSS do portfólio (`.cover-<tipo>`). */
+/**
+ * Tipos de capa desenhados no CSS do portfólio (`.cover-<tipo>`).
+ * "iexpress" é o nome do estilo original de capa com prévia do Figma
+ * (hoje usado pelo estudo Optiz).
+ */
 export type ProjectCover = "donuts" | "landing" | "iexpress" | "private";
 
 export interface Project {
@@ -34,7 +38,7 @@ export interface Project {
   points: string[];
   repo?: string;
   site?: string;
-  /** Imagem estática exibida no diálogo (apenas iExpress). */
+  /** Prévia estática do Figma exibida na capa e no diálogo (estudo Optiz). */
   image?: boolean;
   note: string;
 }
@@ -133,23 +137,24 @@ export const projects: Project[] = [
     ],
   }),
   {
-    id: "iexpress",
-    name: "iExpress — interface study",
-    label: "UI DESIGN / CONCEITO",
+    id: "optiz",
+    name: "Optiz — interface study",
+    label: "UI DESIGN / FIGMA",
     filters: ["figma"],
     showInAll: false,
-    description: "Estudo de landing page para uma marca fictícia de tecnologia, desenvolvido no Figma.",
+    description: "Seções de landing page para uma ótica, desenhadas no Figma.",
     tags: ["Figma", "UI Design", "Landing page"],
     cover: "iexpress",
+    tone: "optiz",
     summary:
-      "Uma proposta de interface para a página inicial da iExpress, marca fictícia de iPhones. O estudo explora hierarquia visual, apresentação de produto e chamadas para ação.",
+      "Recorte de seções da landing page Optiz: hero de óculos infantis, carrossel de depoimentos de clientes e chamada para contato. O estudo explora hierarquia tipográfica, fotografia em destaque e navegação por carrossel.",
     points: [
-      "Direção visual clara, com roxo como cor de destaque.",
-      "Composição de hero com produto, mensagem e chamadas para ação.",
-      "Apresentação da interface por uma prévia estática do Figma.",
+      "Hero com título condensado em verde profundo e fotografia ocupando a maior parte da área.",
+      "Carrossel de depoimentos com cards de foto, nome e texto, além de controles e indicadores.",
+      "Apresentação por uma prévia estática exportada do Figma.",
     ],
     image: true,
-    note: "Conceito visual de marca fictícia, sem vínculo comercial. Apenas o recorte da página inicial é exibido; o arquivo Figma, painéis internos e dados administrativos não são disponibilizados. Não representa uma aplicação implementada.",
+    note: "Os textos dos depoimentos são marcadores de conteúdo (lorem ipsum) do protótipo. Apenas o recorte das seções é exibido; o arquivo Figma, comentários e telas administrativas não são disponibilizados. Não representa uma aplicação implementada.",
   },
   {
     id: "private",

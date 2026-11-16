@@ -29,7 +29,7 @@ Consulte `documentacao/design-tokens.json` para cores, fontes e enquadramentos. 
 - Donuts Game.
 - As cinco marcas em Desenvolvimento e Acadêmicos. Não classificá-las como trabalhos profissionais contratados.
 - Aba Profissionais exatamente como está, inclusive encaminhamento ao contato de Isaac.
-- Apenas iExpress na seção de UI/Figma. Usar a prévia local existente. Não adicionar o endereço privado do Figma, parâmetros de acesso, comentários ou telas administrativas.
+- Apenas o estudo **Optiz** na seção de UI/Figma (substituiu o iExpress a pedido do usuário). Usar a prévia local (`src/assets/portfolio/optiz.webp`). Não adicionar o endereço privado do Figma, parâmetros de acesso, comentários ou telas administrativas.
 - Formação técnica: Desenvolvimento de Sistemas pela EEEP Aderson Borges de Carvalho; Ciência da Computação na UFCA em andamento.
 - Inglês destacado como autoavaliação de 80/100, sem inventar certificação ou equivalência CEFR.
 - Foto local atual e tratamento visual no CSS. Não gerar uma nova pessoa, não alterar corpo, pose ou enquadramento.
