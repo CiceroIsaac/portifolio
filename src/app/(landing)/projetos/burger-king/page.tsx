@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
+import { BurgerBuilder } from "@/components/landing/burger-king/BurgerBuilder";
 import { ProductCrop } from "@/components/landing/burger-king/ProductCrop";
+import { Marquee } from "@/components/landing/Marquee";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyCta } from "@/components/landing/StudyCta";
 import { StudyFooter } from "@/components/landing/StudyFooter";
@@ -95,8 +97,8 @@ export default function BurgerKingPage() {
       <main>
         {/* Hero centralizada */}
         <section id="inicio" aria-labelledby="bk-title" className={`${WRAP} pt-6 pb-12 text-center lg:pt-2 lg:pb-14`}>
-          <p className={`${EYEBROW} text-bk-red`}>Quando a vontade chama...</p>
-          <h1 id="bk-title" className={`${HEADING} mx-auto mt-4 max-w-[12ch] text-[clamp(2.4rem,6.1vw,5.5rem)] md:max-w-none`}>
+          <p className={`${EYEBROW} text-bk-red motion-safe:animate-hero-in`}>Quando a vontade chama...</p>
+          <h1 id="bk-title" className={`${HEADING} anim-delay-1 mx-auto mt-4 max-w-[12ch] motion-safe:animate-hero-in text-[clamp(2.4rem,6.1vw,5.5rem)] md:max-w-none`}>
             Bateu a fome? <br className="hidden md:block" />
             Vai de Whopper.
           </h1>
@@ -110,7 +112,7 @@ export default function BurgerKingPage() {
               WHOPPER
             </p>
             <div className="relative mx-auto w-full max-w-[660px] pt-[5%]">
-              <div aria-hidden="true" className="absolute top-0 left-1/2 aspect-square w-[84%] -translate-x-1/2 rounded-full bg-[#f2c477]" />
+              <div aria-hidden="true" className="anim-delay-1 absolute top-0 left-1/2 aspect-square w-[84%] -translate-x-1/2 rounded-full bg-[#f2c477] motion-safe:animate-pop" />
               <ProductCrop
                 src={whopper}
                 alt="Sanduíche Whopper com alface, tomate, cebola, picles, queijo e carne grelhada"
@@ -119,40 +121,43 @@ export default function BurgerKingPage() {
                 centerY={57}
                 priority
                 sizes="(min-width: 768px) 660px, 100vw"
-                className="relative mx-auto w-full drop-shadow-[0_24px_24px_rgba(80,35,20,.25)]"
+                // O sanduíche "cai" no lugar ao carregar a página.
+                className="anim-delay-3 relative mx-auto w-full drop-shadow-[0_24px_24px_rgba(80,35,20,.25)] motion-safe:animate-drop"
               />
               <p className="relative mt-3 text-lg lg:text-[21px]">O clássico que chega chegando.</p>
             </div>
             {/* Selo "grelhado no fogo": círculo no desktop, etiqueta no mobile */}
             <p
-              className={`${HEADING} absolute top-0 right-0 rotate-[-4deg] rounded-full bg-bk-red px-4 py-1.5 font-sans text-xs text-white uppercase md:top-[14%] md:right-[8%] md:grid md:size-[150px] md:rotate-[14deg] md:place-items-center md:p-0 md:font-bookman md:text-lg md:leading-tight`}
+              className={`${HEADING} absolute top-0 right-0 rotate-[-4deg] rounded-full bg-bk-red px-4 py-1.5 font-sans text-xs text-white uppercase md:top-[14%] md:right-[8%] md:grid md:size-[150px] md:rotate-[14deg] md:place-items-center md:p-0 md:font-bookman md:text-lg md:leading-tight motion-safe:animate-wobble`}
             >
               Grelhado <br className="hidden md:block" />
               no fogo
             </p>
           </div>
-          <a href="#cardapio" className={`${BTN_RED} relative z-10 mt-6 inline-flex w-full sm:w-[310px]`}>
+          <a href="#cardapio" className={`${BTN_RED} anim-delay-4 relative z-10 mt-6 inline-flex w-full motion-safe:animate-hero-in sm:w-[310px]`}>
             Conheça o Whopper <ArrowRight />
           </a>
         </section>
 
         {/* Faixa marrom */}
-        <div className="bg-bk-brown px-6 py-5 text-center text-bk-bg">
-          <p className={`${HEADING} text-[clamp(1.2rem,2.3vw,2.05rem)] uppercase`}>
-            Sabor grande. <br className="sm:hidden" />
-            Vontade maior ainda.
-          </p>
-        </div>
+        <Marquee
+          items={["Sabor grande.", "Vontade maior ainda.", "Grelhado no fogo.", "Do seu jeito."]}
+          separator={<span className="text-bk-orange">★</span>}
+          className="bg-bk-brown py-5 text-bk-bg"
+          itemClassName={`${HEADING} text-[clamp(1.2rem,2.3vw,2.05rem)] uppercase`}
+        />
 
         {/* Cardápio */}
         <section id="cardapio" aria-labelledby="cardapio-title" className={`${WRAP} py-16 lg:py-24`}>
-          <p className={`${EYEBROW} text-bk-red`}>Qual é o seu favorito?</p>
-          <h2 id="cardapio-title" className={`${HEADING} mt-5 text-[clamp(1.9rem,3.2vw,2.9rem)]`}>
+          <p className={`${EYEBROW} reveal text-bk-red`}>Qual é o seu favorito?</p>
+          <h2 id="cardapio-title" className={`${HEADING} reveal mt-5 text-[clamp(1.9rem,3.2vw,2.9rem)]`}>
             Escolha sua próxima mordida.
           </h2>
           <ul className="mt-10 grid gap-6 md:grid-cols-3">
-            {MENU.map((item) => (
-              <li key={item.name} className="flex flex-col rounded-3xl bg-[#ead6bb] p-6 lg:p-7">
+            {MENU.map((item, i) => (
+              <li key={item.name} className="reveal flex" style={{ "--reveal-delay": `${i * 130}ms` } as React.CSSProperties}>
+                {/* Hover: card sobe e o produto dá um "pulo" inclinado */}
+                <div className="group flex w-full flex-col rounded-3xl bg-[#ead6bb] p-6 transition-[translate,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(80,35,20,.15)] lg:p-7">
                 <div className="flex h-48 items-center justify-center lg:h-52">
                   <ProductCrop
                     src={item.image}
@@ -161,7 +166,7 @@ export default function BurgerKingPage() {
                     productHeight={item.crop.h}
                     centerY={item.crop.cy}
                     sizes="400px"
-                    className="w-full max-w-[340px]"
+                    className="w-full max-w-[340px] transition-transform duration-500 group-hover:-translate-y-2 group-hover:-rotate-3 group-hover:scale-105"
                   />
                 </div>
                 <h3 className={`${HEADING} mt-6 text-[clamp(1.5rem,2vw,1.75rem)]`}>{item.name}</h3>
@@ -173,6 +178,7 @@ export default function BurgerKingPage() {
                   <ArrowRight className="size-5" />
                   <span className="sr-only">Monte do seu jeito: {item.name}</span>
                 </a>
+                </div>
               </li>
             ))}
           </ul>
@@ -181,7 +187,7 @@ export default function BurgerKingPage() {
         {/* Do seu jeito */}
         <section id="do-seu-jeito" aria-labelledby="jeito-title" className="bg-bk-red text-bk-bg">
           <div className={`${WRAP} grid gap-12 py-16 lg:grid-cols-2 lg:py-20`}>
-            <div>
+            <div className="reveal">
               <p className={EYEBROW}>A combinação é sua.</p>
               <h2 id="jeito-title" className={`${HEADING} mt-5 text-[clamp(1.9rem,4.4vw,3.95rem)]`}>
                 Do seu jeito. <br />
@@ -189,10 +195,13 @@ export default function BurgerKingPage() {
                 mordida.
               </h2>
             </div>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-16">
-              {INGREDIENTS.map((ing) => (
+            <ul className="reveal grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-16">
+              {INGREDIENTS.map((ing, i) => (
                 <li key={ing.name} className="flex flex-col items-center gap-4 text-center text-sm font-bold">
-                  <span className="grid aspect-square w-full max-w-[148px] place-items-center rounded-full bg-[#e8604a]">
+                  <span
+                    className="play-on-reveal grid aspect-square w-full max-w-[148px] place-items-center rounded-full bg-[#e8604a] transition-transform duration-300 hover:scale-110 hover:rotate-6 motion-safe:animate-pop"
+                    style={{ animationDelay: `${200 + i * 150}ms` }}
+                  >
                     <Image src={ing.image} alt="" className="w-[64%]" />
                   </span>
                   {ing.name}
@@ -202,9 +211,22 @@ export default function BurgerKingPage() {
           </div>
         </section>
 
+        {/* Nova seção: monte o seu (interativa) */}
+        <section id="monte" aria-labelledby="monte-title" className={`${WRAP} pt-16 lg:pt-24`}>
+          <div className="reveal">
+            <p className={`${EYEBROW} text-bk-red`}>Monte o seu</p>
+            <h2 id="monte-title" className={`${HEADING} mt-5 mb-10 text-[clamp(1.9rem,3.2vw,2.9rem)]`}>
+              Uma camada de cada vez.
+            </h2>
+          </div>
+          <div className="reveal" style={{ "--reveal-delay": `${150}ms` } as React.CSSProperties}>
+            <BurgerBuilder />
+          </div>
+        </section>
+
         {/* Acompanhamentos */}
         <section aria-labelledby="combo-title" className={`${WRAP} grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-20`}>
-          <div className="lg:row-span-2">
+          <div className="reveal reveal-left lg:row-span-2">
             <p className={`${EYEBROW} text-bk-red`}>Melhor ainda junto</p>
             <h2 id="combo-title" className={`${HEADING} mt-5 text-[clamp(1.9rem,3.6vw,3.25rem)]`}>
               Tem companhia <br />
@@ -218,7 +240,7 @@ export default function BurgerKingPage() {
               Explorar combinações <ArrowRight />
             </a>
           </div>
-          <div className="relative mx-auto w-full max-w-[520px]">
+          <div className="reveal reveal-zoom relative mx-auto w-full max-w-[520px]">
             <div aria-hidden="true" className="mx-auto aspect-square w-[94%] rounded-full bg-[#f2c477]" />
             <div className="absolute inset-0 flex items-end justify-center gap-[2%] pb-[12%]">
               <ProductCrop
@@ -228,9 +250,9 @@ export default function BurgerKingPage() {
                 productHeight={0.49}
                 centerY={52}
                 sizes="260px"
-                className="w-[44%]"
+                className="w-[44%] motion-safe:animate-float"
               />
-              <ProductCrop src={coke} alt="Lata de refrigerante" productWidth={0.24} productHeight={0.43} centerY={54} sizes="260px" className="w-[42%]" />
+              <ProductCrop src={coke} alt="Lata de refrigerante" productWidth={0.24} productHeight={0.43} centerY={54} sizes="260px" className="w-[42%] [animation-delay:-3s] motion-safe:animate-float" />
             </div>
           </div>
           <a href="#cardapio" className={`${BTN_RED} inline-flex w-full lg:hidden`}>
@@ -240,7 +262,7 @@ export default function BurgerKingPage() {
 
         {/* Restaurantes / chamada final */}
         <section id="restaurantes" aria-labelledby="final-title" className="sm:px-6 sm:pb-16 md:px-10 lg:pb-12">
-          <div className="mx-auto flex max-w-[1280px] flex-col gap-8 bg-bk-brown px-6 py-12 text-bk-bg sm:flex-row sm:items-center sm:justify-between sm:rounded-3xl sm:px-11">
+          <div className="reveal mx-auto flex max-w-[1280px] flex-col gap-8 bg-bk-brown px-6 py-12 text-bk-bg sm:flex-row sm:items-center sm:justify-between sm:rounded-3xl sm:px-11">
             <div>
               <h2 id="final-title" className={`${HEADING} text-[clamp(1.75rem,2.5vw,2.2rem)]`}>
                 Sua próxima parada tem sabor.
