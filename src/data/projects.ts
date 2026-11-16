@@ -125,7 +125,15 @@ export const projects: Project[] = [
       "Seções de soluções, estilo de vida e app; CTA final sem destino comercial inventado.",
     ],
   }),
-  landingPlaceholder("nescau", "Nescau", "02"),
+  landingStudy("nescau", "Nescau", "02", {
+    summary:
+      "Landing page conceitual inspirada no Nescau: vermelho e amarelo, títulos fortes em caixa alta, raio gráfico e produto protagonista, com seções de formatos e ideias de receitas.",
+    points: [
+      "Hero com o produto sobre o raio, ampliado sem deformar o PNG (margens transparentes).",
+      "Cards de formatos e de ideias; fotos de receita com enquadramento em cover.",
+      "Nenhum preço, peso ou dado nutricional inventado; \"Ver ideia\" explica o estudo sem link vazio.",
+    ],
+  }),
   landingPlaceholder("dona-benta", "Farinha Dona Benta", "03"),
   landingPlaceholder("burger-king", "Burger King", "04"),
   landingPlaceholder("doritos", "Doritos", "05"),
