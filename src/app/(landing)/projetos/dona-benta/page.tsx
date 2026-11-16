@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
-import { ScallopEdge, Sticker, TilePattern } from "@/components/landing/dona-benta/Decor";
+import { ScallopBadge, ScallopEdge, Sticker, TilePattern } from "@/components/landing/dona-benta/Decor";
 import { Marquee } from "@/components/landing/Marquee";
 import { MobileMenu, type NavLink } from "@/components/landing/MobileMenu";
 import { StudyFooter } from "@/components/landing/StudyFooter";
@@ -55,6 +55,13 @@ const RECIPES: { tag: string; title: string; image: StaticImageData; alt: string
     accent: "bg-benta-blue text-white",
     shadow: "shadow-[8px_8px_0_var(--color-benta-blue)]",
   },
+];
+
+/** Receitas que orbitam o pacote na hero (posições em 120°, raio de 41%). */
+const ORBIT: { label: string; image: StaticImageData; alt: string; x: string; y: string; pill: string }[] = [
+  { label: "Bolo", image: cake, alt: "Bolo com cobertura e raspas de laranja", x: "50%", y: "9%", pill: "bg-benta-yellow text-benta-navy" },
+  { label: "Brownie", image: brownie, alt: "Brownie com sorvete e frutas vermelhas", x: "85.5%", y: "70.5%", pill: "bg-benta-blue text-white" },
+  { label: "Massas", image: lasagna, alt: "Massa gratinada em travessa", x: "14.5%", y: "70.5%", pill: "bg-white text-benta-navy" },
 ];
 
 /** Momentos do preparo (sem quantidades nem passo a passo de receita). */
@@ -160,34 +167,53 @@ export default function DonaBentaPage() {
               </div>
             </div>
 
-            {/* Composição: círculo azul com azulejos, foto com anel girando, selo e pacote */}
-            <div className="anim-delay-2 relative mx-auto aspect-square w-full max-w-[520px] motion-safe:animate-pop">
-              <div className="absolute inset-[4%] overflow-hidden rounded-full bg-benta-blue">
-                <TilePattern className="text-white/15" />
+            {/* Farinha protagonista: selo festonê com azulejos, pacote ao centro e receitas em órbita */}
+            <div className="anim-delay-2 relative mx-auto aspect-square w-full max-w-[560px] motion-safe:animate-pop">
+              {/* Selo rosa recortado, como o do logotipo */}
+              <ScallopBadge className="absolute inset-[8%] size-[84%] text-benta-pink drop-shadow-[0_24px_40px_rgba(23,43,90,.18)]" />
+              <div className="absolute inset-[16%] overflow-hidden rounded-full">
+                <TilePattern className="text-white/35" />
               </div>
-              {/* Anel tracejado girando devagar */}
-              <div className="absolute inset-[9%] rounded-full border-[3px] border-dashed border-benta-pink motion-safe:animate-spin-slow" />
-              <Image
-                src={cake}
-                alt="Bolo com cobertura de açúcar e raspas de laranja em um prato azul"
-                priority
-                sizes="(min-width: 1024px) 420px, 75vw"
-                className="absolute inset-[14%] size-[72%] rounded-full border-[6px] border-white object-cover shadow-[0_24px_50px_rgba(23,43,90,.35)]"
-              />
-              <Sticker className="absolute top-[2%] right-[2%] size-[27%] motion-safe:animate-wobble">
+              {/* Disco branco: o JPG do pacote tem fundo branco e se integra aqui */}
+              <div className="absolute inset-[24%] grid place-items-center overflow-hidden rounded-full bg-white ring-6 ring-benta-yellow">
+                <Image
+                  src={flour}
+                  alt="Pacote de Farinha de Trigo Dona Benta"
+                  priority
+                  sizes="(min-width: 1024px) 260px, 45vw"
+                  className="h-auto w-[74%] -rotate-3 motion-safe:animate-float"
+                />
+              </div>
+
+              {/* Órbita: o anel gira devagar e cada foto gira ao contrário para ficar de pé */}
+              <div className="absolute inset-0 motion-safe:animate-spin-slow">
+                {ORBIT.map((item) => (
+                  <div
+                    key={item.label}
+                    className="absolute size-[25%] -translate-x-1/2 -translate-y-1/2"
+                    style={{ left: item.x, top: item.y }}
+                  >
+                    <div className="size-full motion-safe:animate-spin-slow-reverse">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        sizes="140px"
+                        className="size-full rounded-full border-4 border-white object-cover shadow-[0_12px_24px_rgba(23,43,90,.25)]"
+                      />
+                      <span className={`absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-[11px] font-bold whitespace-nowrap ${item.pill}`}>
+                        {item.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <Sticker className="absolute top-[2%] right-[4%] size-[22%] motion-safe:animate-wobble">
                 Feito
                 <br />
                 em casa
               </Sticker>
-              <Heart className="absolute right-[1%] bottom-[22%] size-[9%] text-benta-pink motion-safe:animate-float" />
-              <figure className="absolute bottom-[2%] left-[-2%] flex items-center gap-3 rounded-2xl bg-white p-3 pr-5 shadow-[0_14px_30px_rgba(23,43,90,.18)] motion-safe:animate-float-slow sm:p-4 sm:pr-6">
-                <Image src={flour} alt="Pacote de Farinha de Trigo Dona Benta" sizes="80px" className="h-auto w-12 sm:w-16" />
-                <figcaption className="text-sm leading-snug font-semibold sm:text-base">
-                  Um clássico
-                  <br />
-                  da sua cozinha.
-                </figcaption>
-              </figure>
+              <Heart className="absolute bottom-[8%] left-[6%] size-[8%] text-benta-blue motion-safe:animate-float" />
             </div>
           </div>
         </section>

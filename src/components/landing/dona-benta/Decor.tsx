@@ -43,6 +43,25 @@ export function ScallopEdge({ color, flip = false }: { color: string; flip?: boo
   );
 }
 
+/**
+ * Disco com borda recortada (festonê), como o selo do logotipo.
+ * Desenhado como um círculo + 28 "bolinhas" na borda.
+ */
+export function ScallopBadge({ className = "" }: { className?: string }) {
+  const bumps = 28;
+  return (
+    <svg viewBox="0 0 200 200" aria-hidden="true" className={className}>
+      <g fill="currentColor">
+        <circle cx="100" cy="100" r="88" />
+        {Array.from({ length: bumps }, (_, i) => {
+          const angle = (i / bumps) * Math.PI * 2;
+          return <circle key={i} cx={100 + Math.cos(angle) * 88} cy={100 + Math.sin(angle) * 88} r="11" />;
+        })}
+      </g>
+    </svg>
+  );
+}
+
 /** Selo amarelo em forma de estrela/flor, com texto ao centro. */
 export function Sticker({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (

@@ -85,6 +85,8 @@
   --animate-float-slow: float 9s ease-in-out infinite;
   --animate-wobble: wobble 5s ease-in-out infinite;
   --animate-spin-slow: spin-slow 28s linear infinite;
+  /* Sentido contrário (o atalho `animation` zera um animation-direction avulso). */
+  --animate-spin-slow-reverse: spin-slow 28s linear infinite reverse;
   --animate-marquee: marquee 26s linear infinite;
   --animate-zap: zap 3.2s ease-in-out infinite;
   --animate-pop: pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;

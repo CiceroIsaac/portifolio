@@ -126,7 +126,7 @@ export default function DoritosPage() {
           <figure className="anim-delay-2 relative mx-auto w-full max-w-[560px] py-[6%] motion-safe:animate-pop">
             {/* Triângulos girando devagar, em sentidos opostos */}
             <Triangle strokeWidth={10} className="absolute top-[2%] left-[4%] h-[100%] w-[96%] text-doritos-red motion-safe:animate-spin-slow" />
-            <Triangle className="absolute top-[12%] left-[-4%] h-[74%] w-[92%] rotate-[160deg] text-doritos-red/50 [animation-direction:reverse] motion-safe:animate-spin-slow" />
+            <Triangle className="absolute top-[12%] left-[-4%] h-[74%] w-[92%] rotate-[160deg] text-doritos-red/50 motion-safe:animate-spin-slow-reverse" />
             <div className="relative mx-auto w-[60%] rotate-[8deg] bg-white p-[4%] shadow-[0_30px_60px_rgba(0,0,0,.45)] motion-safe:animate-wobble">
               <PackCrop src={nacho} alt="Pacote de Doritos Queijo Nacho" crop={NACHO_CROP} priority sizes="300px" />
             </div>
@@ -216,7 +216,7 @@ export default function DoritosPage() {
           <div className="grid items-center gap-10 border-t border-white/15 py-16 lg:grid-cols-2 lg:py-20">
             <div aria-hidden="true" className="relative mx-auto hidden aspect-square w-full max-w-[420px] lg:block">
               <Triangle strokeWidth={8} className="absolute inset-[6%] text-doritos-red motion-safe:animate-spin-slow" />
-              <Triangle strokeWidth={3} className="absolute inset-[10%] rotate-[110deg] text-doritos-yellow [animation-direction:reverse] motion-safe:animate-spin-slow" />
+              <Triangle strokeWidth={3} className="absolute inset-[10%] rotate-[110deg] text-doritos-yellow motion-safe:animate-spin-slow-reverse" />
             </div>
             <div className="reveal reveal-right">
               <p className={EYEBROW}>Sem espaço para o tanto faz.</p>
