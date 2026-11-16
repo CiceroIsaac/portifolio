@@ -143,7 +143,15 @@ export const projects: Project[] = [
       "Fontes locais (URW Bookman e Manrope) carregadas com next/font.",
     ],
   }),
-  landingPlaceholder("burger-king", "Burger King", "04"),
+  landingStudy("burger-king", "Burger King", "04", {
+    summary:
+      "Landing page conceitual inspirada no Burger King: creme, marrom e vermelho, Bookman pesada, sanduíche em destaque, ingredientes e acompanhamentos.",
+    points: [
+      "Componente ProductCrop: enquadra produtos de PNGs com margens transparentes sem deformá-los.",
+      "Hero centralizada com selo responsivo (círculo no desktop, etiqueta no mobile).",
+      "Cardápio, ingredientes e acompanhamentos sem preços ou ofertas inventadas.",
+    ],
+  }),
   landingPlaceholder("doritos", "Doritos", "05"),
   {
     id: "iexpress",
